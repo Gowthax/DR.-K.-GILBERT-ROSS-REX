@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#ffffff" stroke="url(#aiGrad)" stroke-width="4"/>
+  <!-- Neural Net + Pulse Cross -->
+  <path d="M100 45 L100 155 M45 100 L155 100" stroke="#e0f2fe" stroke-width="12" stroke-linecap="round"/>
+  <path d="M100 45 L100 155 M45 100 L155 100" stroke="url(#aiGrad)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Nodes -->
+  <circle cx="100" cy="45" r="10" fill="#059669"/>
+  <circle cx="100" cy="155" r="10" fill="#059669"/>
+  <circle cx="45" cy="100" r="10" fill="#0284c7"/>
+  <circle cx="155" cy="100" r="10" fill="#0284c7"/>
+  <circle cx="100" cy="100" r="18" fill="#0b2117"/>
+  <path d="M92 100 L97 95 L103 105 L108 100" stroke="#00e676" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="100" y="180" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#0b2117" text-anchor="middle" letter-spacing="1">AI IN HEALTHCARE</text>
+</svg>

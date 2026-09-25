@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+/* ============================================================
+   DESIGN TOKENS — Dr. K. Gilbert Ross Rex Portfolio
+   ============================================================ */
+:root {
+  /* Palette */
+  --bg:            #EEF4EF;
+  --bg-dark:       #E4EDE5;
+  --ink:           #0B2117;
+  --ink-80:        rgba(11,33,23,0.80);
+  --ink-50:        rgba(11,33,23,0.50);
+  --ink-30:        rgba(11,33,23,0.30);
+  --ink-12:        rgba(11,33,23,0.12);
+  --ink-06:        rgba(11,33,23,0.06);
+  --green-deep:    #294936;
+  --green-mid:     #3D6654;
+  --green-muted:   #667A69;
+  --green-sage:    #DCE6DC;
+  --green-accent:  #8DA36D;
+  --border:        rgba(20,45,30,0.16);
+  --border-light:  rgba(20,45,30,0.08);
+
+  /* Typography */
+  --font-body:     'DM Sans', 'Inter', system-ui, sans-serif;
+  --font-display:  'DM Sans', 'Inter', system-ui, sans-serif;
+
+  /* Motion */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Spacing */
+  --nav-h:         72px;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles this */
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul, ol { list-style: none; }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--green-muted); border-radius: 0; }
+
+/* ============================================================
+   CANVAS (3D BG — hidden in single-page to avoid overhead)
+   ============================================================ */
+.canvas-container {
+  display: none; /* Disabled in single-page redesign */
+}
+
+/* ============================================================
+   APP SHELL
+   ============================================================ */
+.app-container {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.section-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+}
+
+.thin-rule {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+.display-number {
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  color: var(--ink);
+}
+
+/* Clip-path reveal utility — JS controlled */
+.reveal-clip {
+  clip-path: inset(0 0 100% 0);
+  opacity: 0;
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

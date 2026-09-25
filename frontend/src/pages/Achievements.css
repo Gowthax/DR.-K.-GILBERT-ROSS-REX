@@ -1,0 +1,530 @@
+/* ============================================================
+   ACHIEVEMENTS & HONORS PHOTO ARCHIVE
+   ============================================================ */
+
+.achievements-page-wrapper {
+  padding-top: 130px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.achievements-header {
+  margin-bottom: 36px;
+  max-width: 840px;
+}
+
+.achievements-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--color-forest);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.badge-ring {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+}
+
+.achievements-lead {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* Filter Pill Bar */
+.achievements-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-pill-btn {
+  padding: 10px 20px;
+  background: rgba(52, 78, 65, 0.05);
+  border: 1px solid rgba(163, 177, 138, 0.2);
+  border-radius: 30px;
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.filter-pill-btn:hover {
+  background: rgba(58, 90, 64, 0.15);
+  border-color: rgba(163, 177, 138, 0.4);
+  transform: translateY(-2px);
+}
+
+.filter-pill-btn.is-active {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Primary Visual Gallery Grid */
+.honors-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.honor-card {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(163, 177, 138, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.honor-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-forest);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Stage in Card */
+.honor-image-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #121e17;
+}
+
+.honor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.honor-card:hover .honor-photo {
+  transform: scale(1.05);
+}
+
+.image-overlay-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 30, 23, 0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.honor-card:hover .image-overlay-scrim {
+  opacity: 1;
+}
+
+.expand-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(28, 45, 36, 0.9);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(8px);
+}
+
+.honor-year-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  background: rgba(28, 45, 36, 0.85);
+  border: 1px solid rgba(163, 177, 138, 0.3);
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-sage);
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(6px);
+}
+
+/* Card Body Content */
+.honor-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.honor-category {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-forest);
+}
+
+.honor-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: var(--color-forest);
+  font-weight: 600;
+}
+
+.honor-institution {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.honor-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   LIGHTBOX MODAL FOR FULL-RESOLUTION INSPECTION
+   ============================================================ */
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(14, 24, 18, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-card {
+  position: relative;
+  background: #1a2a20;
+  border: 1px solid rgba(163, 177, 138, 0.35);
+  border-radius: 8px;
+  max-width: 950px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(28, 45, 36, 0.9);
+  border: 1px solid rgba(163, 177, 138, 0.4);
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: var(--color-accent-dark);
+  transform: scale(1.1);
+}
+
+.lightbox-image-wrap {
+  width: 100%;
+  max-height: 60vh;
+  background-color: #101a14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-full-img {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  padding: 24px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #16241b;
+  border-top: 1px solid rgba(163, 177, 138, 0.15);
+}
+
+.lightbox-cat {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--color-sage);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.lightbox-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.lightbox-inst {
+  font-size: 0.95rem;
+  color: #dad7cd;
+}
+
+.lightbox-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   CERTIFICATIONS & NPTEL SECTION
+   ============================================================ */
+
+.certifications-section {
+  margin-bottom: 70px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.cert-item-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(163, 177, 138, 0.15);
+  background: rgba(52, 78, 65, 0.05);
+  transition: all 0.3s ease;
+}
+
+.cert-item-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(163, 177, 138, 0.35);
+  background: rgba(58, 90, 64, 0.1);
+}
+
+.cert-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-badge-type {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.cert-badge-type.atal {
+  background: rgba(88, 129, 87, 0.3);
+  border: 1px solid var(--color-accent);
+  color: #f2efe9;
+}
+
+.cert-badge-type.nptel {
+  background: rgba(163, 177, 138, 0.2);
+  border: 1px solid rgba(163, 177, 138, 0.4);
+  color: var(--color-sage);
+}
+
+.cert-focus-tag {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.cert-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  line-height: 1.4;
+}
+
+.cert-verified-label {
+  font-size: 0.72rem;
+  color: var(--color-forest);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   LEADERSHIP & GUEST LECTURES GRID
+   ============================================================ */
+
+.academic-leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.panel-subheading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-forest);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(163, 177, 138, 0.2);
+  font-weight: 600;
+}
+
+.leadership-panel,
+.lectures-panel {
+  padding: 30px;
+}
+
+.roles-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.role-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.role-bullet-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(88, 129, 87, 0.3);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.role-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.role-title {
+  font-size: 0.95rem;
+  color: var(--color-forest);
+  font-weight: 500;
+}
+
+.role-dept {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Lectures Timeline */
+.lectures-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lecture-card {
+  display: flex;
+  gap: 18px;
+  padding: 16px;
+  background: rgba(52, 78, 65, 0.05);
+  border: 1px solid rgba(163, 177, 138, 0.15);
+  border-radius: 4px;
+}
+
+.lecture-year-tag {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  flex-shrink: 0;
+}
+
+.lecture-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lecture-title {
+  font-size: 0.98rem;
+  color: var(--color-forest);
+  font-weight: 500;
+}
+
+.lecture-venue {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.lecture-theme {
+  font-size: 0.74rem;
+  color: var(--color-forest);
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .academic-leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-page-wrapper {
+    padding-top: 100px;
+  }
+
+  .honors-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

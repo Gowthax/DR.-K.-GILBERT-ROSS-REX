@@ -1,0 +1,1034 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+.hero-fullscreen-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+
+  overflow: hidden;
+
+  background: #edf4ef;
+
+  color: #0b2419;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.hero-navigation {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 92px;
+
+  padding: 0 8.5vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 50;
+
+  pointer-events: none;
+}
+
+.hero-logo {
+  pointer-events: auto;
+
+  color: #0b2419;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  white-space: nowrap;
+}
+
+.hero-nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: clamp(22px, 2.5vw, 48px);
+
+  pointer-events: auto;
+}
+
+.hero-nav-links a {
+  position: relative;
+
+  color: #486056;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    color 300ms ease,
+    opacity 300ms ease;
+}
+
+.hero-nav-links a:hover {
+  color: #0b2419;
+}
+
+.hero-nav-links a.active {
+  color: #0b2419;
+}
+
+.hero-nav-links a.active::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #0b2419;
+}
+
+
+/* =========================================================
+   MAIN HERO GRID
+========================================================= */
+
+.hero-grid-container {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100svh;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(48vw, 58vw)
+    minmax(420px, 1fr);
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   PORTRAIT STAGE
+========================================================= */
+
+.hero-portrait-stage {
+  position: relative;
+
+  height: 100svh;
+
+  min-height: 720px;
+
+  overflow: visible;
+
+  z-index: 2;
+}
+
+
+/*
+   This is intentionally NOT a card.
+
+   No:
+   - border
+   - box-shadow
+   - background
+   - white overlay
+   - clipping frame
+*/
+
+.hero-professor-anchor {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  pointer-events: none;
+
+  will-change: transform;
+
+  transition: transform 700ms
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   PROFESSOR IMAGE
+========================================================= */
+
+.hero-professor-figure {
+  position: absolute;
+
+  top: 0;
+
+  left: 2vw;
+
+  width: min(58vw, 920px);
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  overflow: visible;
+
+  opacity: 0;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/*
+   IMPORTANT:
+
+   The image is positioned from the TOP rather than
+   vertically centered.
+
+   This prevents the professor's head from being cut.
+*/
+
+.professor-portrait-img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center top;
+
+  user-select: none;
+
+  pointer-events: none;
+
+  /*
+     No border.
+     No shadow.
+     No filter.
+     No blend mode.
+     No overlay.
+  */
+
+  border: none;
+
+  outline: none;
+
+  box-shadow: none;
+
+  filter: none;
+
+  -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   REMOVE OLD VISUAL OVERLAYS
+========================================================= */
+
+/*
+   These classes existed in the previous design.
+   They are deliberately disabled so the face remains clean.
+*/
+
+.portrait-rim-glow,
+.portrait-ambient-glow,
+.portrait-bottom-vignette {
+  display: none !important;
+}
+
+
+/* =========================================================
+   PORTRAIT LABEL
+========================================================= */
+
+.portrait-side-label {
+  position: absolute;
+
+  right: 4.5vw;
+
+  top: 42%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  z-index: 10;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  pointer-events: none;
+}
+
+.portrait-side-label span {
+  color: rgba(43, 76, 61, 0.38);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   PORTRAIT CATEGORY
+========================================================= */
+
+.portrait-category {
+  position: absolute;
+
+  left: 8.5vw;
+
+  bottom: 7.5vh;
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 15px;
+
+  background: rgba(237, 244, 239, 0.88);
+
+  border: 1px solid rgba(55, 91, 71, 0.14);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.category-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #88a46e;
+}
+
+.portrait-category span:last-child {
+  color: #5a7165;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.hero-content-right {
+  position: relative;
+
+  z-index: 10;
+
+  min-height: 100svh;
+
+  padding:
+
+    19vh
+    8vw
+    10vh
+    1vw;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   DESIGNATION
+========================================================= */
+
+.academic-tag {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 22px;
+}
+
+.tag-pulse-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #9eaf79;
+
+  box-shadow:
+    0 0 0 5px rgba(158, 175, 121, 0.12);
+}
+
+.academic-tag span:last-child {
+  color: #426354;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.professor-headline-name {
+  margin: 0;
+
+  max-width: 780px;
+
+  color: #0b2419;
+
+  font-size: clamp(
+    55px,
+    5.2vw,
+    100px
+  );
+
+  line-height: 0.92;
+
+  font-weight: 400;
+
+  letter-spacing: -0.055em;
+}
+
+.name-title-prefix {
+  display: block;
+
+  font-weight: 300;
+
+  opacity: 0.82;
+}
+
+.name-highlight {
+  display: block;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   INSTITUTION
+========================================================= */
+
+.institution-metadata {
+  margin-top: 34px;
+}
+
+.dept-name {
+  margin: 0;
+
+  color: #183629;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+}
+
+.inst-name {
+  margin: 4px 0 0;
+
+  color: #6a7d73;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SEPARATOR
+========================================================= */
+
+.academic-separator-hero {
+  width: 100%;
+
+  max-width: 590px;
+
+  height: 1px;
+
+  margin: 32px 0 25px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(25, 59, 43, 0.45),
+      rgba(25, 59, 43, 0.08)
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left center;
+}
+
+
+/* =========================================================
+   RESEARCH PANEL
+========================================================= */
+
+.research-focus-panel {
+  width: 100%;
+
+  max-width: 590px;
+
+  padding: 21px 24px 22px;
+
+  background: rgba(
+    206,
+    220,
+    211,
+    0.58
+  );
+
+  border-left: 2px solid #9baa79;
+}
+
+.panel-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+}
+
+.panel-title {
+  color: #203b2e;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.panel-pill {
+  padding: 4px 8px;
+
+  border: 1px solid
+    rgba(42, 73, 57, 0.16);
+
+  color: #3c5d4c;
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+}
+
+.focus-list {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.focus-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.focus-bullet-marker {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #a6b681;
+
+  flex-shrink: 0;
+}
+
+.focus-text {
+  color: #274538;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.academic-stats-grid {
+  width: 100%;
+
+  max-width: 590px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 27px;
+
+  border-top: 1px solid
+    rgba(46, 76, 62, 0.12);
+
+  border-bottom: 1px solid
+    rgba(46, 76, 62, 0.12);
+}
+
+.stat-cell {
+  min-height: 92px;
+
+  padding: 17px 13px 14px 0;
+
+  border-right: 1px solid
+    rgba(46, 76, 62, 0.10);
+}
+
+.stat-cell:not(:first-child) {
+  padding-left: 18px;
+}
+
+.stat-cell:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  color: #0b2419;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -0.04em;
+}
+
+.stat-desc {
+  max-width: 110px;
+
+  margin-top: 8px;
+
+  color: #63776c;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.hero-cta-group {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+.btn-academic-primary,
+.btn-academic-secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 350ms ease,
+    background 350ms ease,
+    color 350ms ease,
+    border-color 350ms ease;
+}
+
+.btn-academic-primary {
+  background: #0a261a;
+
+  color: #edf4ef;
+}
+
+.btn-academic-primary:hover {
+  transform: translateY(-3px);
+
+  background: #173d2b;
+}
+
+.btn-academic-secondary {
+  border: 1px solid
+    rgba(31, 61, 47, 0.28);
+
+  color: #183629;
+
+  background: transparent;
+}
+
+.btn-academic-secondary:hover {
+  transform: translateY(-3px);
+
+  border-color: #183629;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.25
+  );
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.hero-scroll-indicator {
+  position: absolute;
+
+  left: 8.5vw;
+
+  bottom: 27px;
+
+  z-index: 30;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.scroll-number {
+  color: #567062;
+
+  font-size: 9px;
+
+  letter-spacing: 0.14em;
+}
+
+.scroll-line {
+  width: 40px;
+
+  height: 1px;
+
+  background: rgba(
+    50,
+    81,
+    65,
+    0.35
+  );
+}
+
+.scroll-text {
+  color: #73847b;
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero-navigation {
+    padding: 0 5vw;
+  }
+
+  .hero-nav-links {
+    gap: 18px;
+  }
+
+  .hero-nav-links a {
+    font-size: 9px;
+  }
+
+  .hero-grid-container {
+    grid-template-columns:
+      50vw
+      1fr;
+  }
+
+  .hero-professor-figure {
+    left: -2vw;
+
+    width: 60vw;
+  }
+
+  .hero-content-right {
+    padding-left: 2vw;
+    padding-right: 5vw;
+  }
+
+  .professor-headline-name {
+    font-size: clamp(
+      48px,
+      5vw,
+      76px
+    );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero-fullscreen-wrapper {
+    min-height: auto;
+
+    overflow: hidden;
+  }
+
+  .hero-navigation {
+    position: absolute;
+
+    height: 76px;
+
+    padding: 0 24px;
+  }
+
+  .hero-logo {
+    font-size: 10px;
+  }
+
+  .hero-nav-links {
+    display: none;
+  }
+
+  .hero-grid-container {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+  .hero-portrait-stage {
+    width: 100%;
+
+    height: 72svh;
+
+    min-height: 560px;
+  }
+
+  .hero-professor-figure {
+    top: 45px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: calc(100% - 30px);
+  }
+
+  .professor-portrait-img {
+    object-fit: contain;
+
+    object-position: center top;
+  }
+
+  .portrait-side-label {
+    right: 18px;
+
+    top: 45%;
+  }
+
+  .portrait-category {
+    left: 24px;
+
+    bottom: 24px;
+  }
+
+  .hero-content-right {
+    width: 100%;
+
+    min-height: auto;
+
+    padding:
+      55px
+      24px
+      120px;
+  }
+
+  .professor-headline-name {
+    font-size: clamp(
+      52px,
+      14vw,
+      82px
+    );
+
+    line-height: 0.92;
+  }
+
+  .research-focus-panel {
+    max-width: none;
+  }
+
+  .academic-stats-grid {
+    max-width: none;
+  }
+
+  .hero-scroll-indicator {
+    left: 24px;
+
+    bottom: 28px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .hero-portrait-stage {
+    height: 65svh;
+
+    min-height: 500px;
+  }
+
+  .hero-professor-figure {
+    top: 55px;
+
+    height: calc(100% - 55px);
+  }
+
+  .portrait-side-label {
+    display: none;
+  }
+
+  .portrait-category {
+    bottom: 18px;
+
+    left: 18px;
+  }
+
+  .academic-stats-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .stat-cell:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-cell:nth-child(3),
+  .stat-cell:nth-child(4) {
+    border-top: 1px solid
+      rgba(46, 76, 62, 0.10);
+  }
+
+  .stat-cell:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+  }
+
+  .btn-academic-primary,
+  .btn-academic-secondary {
+    width: 100%;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+}

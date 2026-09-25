@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="95" fill="#ffffff" stroke="#003366" stroke-width="6"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#003366" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Central Globe & Book motif -->
+  <path d="M50 120 C70 90, 130 90, 150 120 C130 110, 70 110, 50 120 Z" fill="#0066cc"/>
+  <path d="M50 120 C70 135, 130 135, 150 120 C130 145, 70 145, 50 120 Z" fill="#003366"/>
+  <circle cx="100" cy="75" r="22" fill="#e67e22"/>
+  <polygon points="100,50 108,68 126,75 108,82 100,100 92,82 74,75 92,68" fill="#ffffff" opacity="0.9"/>
+  <!-- NPTEL Text -->
+  <text x="100" y="165" font-family="'Inter', sans-serif" font-weight="900" font-size="28" fill="#003366" text-anchor="middle" letter-spacing="2">NPTEL</text>
+  <text x="100" y="180" font-family="'Inter', sans-serif" font-weight="600" font-size="8" fill="#e67e22" text-anchor="middle" letter-spacing="1">IITs &amp; IISc INITIATIVE</text>
+</svg>
