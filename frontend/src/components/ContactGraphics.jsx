@@ -42,7 +42,7 @@ const AbstractShape = () => {
 
 const ContactGraphics = () => {
   return (
-    <div style={{ position: 'absolute', top: 0, right: 0, width: '50%', height: '100%', zIndex: 0, pointerEvents: 'none', opacity: 0.6 }}>
+    <div className="contact-graphics-canvas" style={{ position: 'absolute', top: 0, right: 0, width: '45%', height: '100%', zIndex: 0, pointerEvents: 'none', opacity: 0.5 }}>
       <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />

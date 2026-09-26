@@ -383,23 +383,27 @@
     grid-template-rows: auto auto;
     padding: 0;
     min-height: auto;
+    align-items: flex-start;
   }
 
   .hero-portrait-col {
     height: auto;
-    min-height: 400px;
-    padding-top: 40px;
-    justify-content: flex-start;
+    min-height: 320px;
+    max-height: 420px;
+    padding-top: 24px;
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
     border-bottom: 1px solid var(--border-light);
   }
 
   .hero-portrait-wrap {
-    height: 380px;
-    width: 90%;
+    height: 320px;
+    width: 75%;
     margin: 0 auto;
     justify-content: center;
-    overflow: hidden; /* Clean flat crop for the bottom of the portrait */
+    overflow: hidden;
+    opacity: 1 !important; /* ensure visible on tablet */
   }
 
   .portrait-image {
@@ -407,52 +411,139 @@
     height: 100%;
     object-fit: contain;
     object-position: top center;
-    transform: scale(1.25);
+    transform: scale(1.1);
     transform-origin: top center;
     mask-image: none;
     -webkit-mask-image: none;
   }
 
-  .portrait-badge { left: 50%; transform: translateX(-50%); bottom: 8%; }
+  .portrait-badge { display: none; }
   .hero-side-label { display: none; }
+  .portrait-ring-outer,
+  .portrait-ring-inner { display: none; }
 
   .hero-content-block {
     padding: 32px 6% 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Prevent name canvas from overlapping below elements */
+    position: relative;
+    z-index: 1;
   }
 
+  /* Critical fix: name canvas must not overflow its bounds */
   .hero-name-canvas-wrap {
-    height: 140px;
+    height: 120px;
     margin-left: 0;
+    margin-bottom: 24px;
+    overflow: hidden;
+    position: relative;
   }
 
-  .portrait-ring-outer,
-  .portrait-ring-inner { display: none; }
+  .hero-institution-block {
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-statement-wrap {
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-cta {
+    margin-top: 28px;
+    align-self: flex-start;
+  }
 }
 
 @media (max-width: 576px) {
   .hero-section {
     padding-top: calc(var(--nav-h) - 10px);
+    min-height: auto;
   }
+
   .hero-portrait-col {
-    height: auto;
-    min-height: 360px;
-    padding-top: 20px;
+    min-height: 280px;
+    max-height: 360px;
+    padding-top: 16px;
   }
+
   .hero-portrait-wrap {
-    height: 340px;
-    width: 100%;
+    height: 280px;
+    width: 85%;
   }
+
+  .portrait-image {
+    transform: scale(1.05);
+    transform-origin: top center;
+  }
+
+  .hero-content-block {
+    padding: 24px 5% 60px;
+  }
+
+  /* Name canvas fully contained — no overflow, no overlap */
   .hero-name-canvas-wrap {
-    height: 110px;
+    height: 100px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
+
+  .hero-designation {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.15em;
+  }
+
   .hero-blur-statement {
-    font-size: 0.88rem !important;
-    line-height: 1.6 !important;
+    font-size: 0.86rem !important;
+    line-height: 1.65 !important;
+    max-width: 100%;
   }
+
+  .hero-inst-logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-dept {
+    font-size: 0.75rem;
+  }
+
+  .hero-inst {
+    font-size: 0.70rem;
+  }
+
   .hero-cta {
     padding: 12px 24px;
     font-size: 0.68rem;
     width: 100%;
     justify-content: center;
+    align-self: stretch;
+    margin-top: 24px;
+  }
+
+  .hero-scroll-hint {
+    bottom: 16px;
+    font-size: 0.52rem;
+  }
+
+  /* Hide decorative geometry on small screens */
+  .hero-bg-geometry {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-portrait-wrap {
+    height: 240px;
+    width: 90%;
+  }
+
+  .hero-name-canvas-wrap {
+    height: 80px;
   }
 }

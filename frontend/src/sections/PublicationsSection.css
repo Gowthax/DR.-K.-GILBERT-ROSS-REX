@@ -1,7 +1,7 @@
 .pub-section {
   position: relative;
-  background: #0D1F10;
-  color: #E8F5E8;
+  background: #071A0F !important;
+  color: #FFFFFF !important;
   padding: 120px 0;
   overflow: hidden;
 }
@@ -28,7 +28,7 @@
   font-weight: 200;
   letter-spacing: -0.03em;
   line-height: 0.9;
-  color: inherit;
+  color: #FFFFFF;
 }
 
 .pub-count-display {
@@ -43,7 +43,7 @@
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 200;
   letter-spacing: -0.04em;
-  color: var(--green-accent);
+  color: #82D576;
   line-height: 0.85;
 }
 
@@ -52,7 +52,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--green-muted);
+  color: rgba(238, 244, 239, 0.75);
   line-height: 1.5;
   padding-bottom: 6px;
 }
@@ -60,40 +60,43 @@
 /* Year filter */
 .pub-filter-bar {
   display: flex;
-  gap: 2px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
 }
 
 .pub-filter-btn {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-50);
-  border: 1px solid var(--border-light);
-  padding: 7px 16px;
+  color: rgba(238, 244, 239, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 8px 18px;
   cursor: pointer;
   transition: all 0.25s;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .pub-filter-btn:hover {
-  color: inherit;
-  border-color: var(--border);
+  color: #FFFFFF;
+  border-color: #82D576;
+  background: rgba(130, 213, 118, 0.1);
 }
 
 .pub-filter-btn.is-active {
-  background: transparent;
-  color: inherit;
-  border-color: inherit;
+  background: #82D576;
+  color: #071A0F;
+  font-weight: 700;
+  border-color: #82D576;
 }
 
 /* Publication stream */
 .pub-stream {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(130, 213, 118, 0.25);
   margin-bottom: 80px;
 }
 
@@ -102,18 +105,18 @@
   grid-template-columns: 100px 1fr;
   gap: 32px;
   padding: 32px 0;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background 0.3s;
   cursor: default;
 }
 
 .pub-entry:hover,
 .pub-entry.is-active {
-  background: rgba(20, 45, 30, 0.025);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .pub-entry.is-active .pub-title {
-  color: var(--green-deep);
+  color: #82D576;
 }
 
 .pub-entry-left {
@@ -124,88 +127,98 @@
 }
 
 .pub-year {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #82D576;
   letter-spacing: 0.02em;
 }
 
 .pub-type {
-  font-size: 0.58rem;
-  font-weight: 600;
+  font-size: 0.62rem;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--green-muted);
+  color: rgba(238, 244, 239, 0.7);
 }
 
-.pub-entry-right { display: flex; flex-direction: column; gap: 6px; }
+.pub-entry-right { display: flex; flex-direction: column; gap: 8px; }
 
 .pub-title {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  color: inherit;
+  color: #FFFFFF;
   line-height: 1.5;
   letter-spacing: -0.01em;
   transition: color 0.3s;
 }
 
 .pub-authors {
-  font-size: 0.78rem;
-  color: var(--ink-50);
-  line-height: 1.5;
+  font-size: 0.85rem;
+  color: rgba(238, 244, 239, 0.85);
+  line-height: 1.6;
 }
 
 .pub-journal {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-style: italic;
-  color: var(--green-muted);
+  color: #82D576;
+  font-weight: 500;
 }
 
 .pub-link {
   display: inline-block;
   margin-top: 8px;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: inherit;
-  border-bottom: 1px solid var(--border);
+  color: #82D576;
+  border-bottom: 1px solid #82D576;
   padding-bottom: 2px;
   transition: color 0.3s, border-color 0.3s;
   align-self: flex-start;
 }
 
 .pub-link:hover {
-  color: var(--green-deep);
-  border-color: var(--green-deep);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 /* Patents */
 .patents-block {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(130, 213, 118, 0.25);
   padding-top: 60px;
+}
+
+.patents-block .ap-sub-heading {
+  color: #82D576;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 .patents-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
+  gap: 16px;
   margin-top: 32px;
 }
 
 .patent-card-item {
   padding: 28px;
-  border: 1px solid var(--border-light);
-  background: transparent;
-  transition: background 0.3s, border-color 0.3s;
+  border: 1px solid rgba(130, 213, 118, 0.25);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .patent-card-item:hover {
-  background: var(--bg-dark);
-  border-color: var(--border);
+  background: rgba(130, 213, 118, 0.08);
+  border-color: #82D576;
+  transform: translateY(-4px);
 }
 
 .patent-card-header {
@@ -216,35 +229,37 @@
 }
 
 .patent-status {
-  font-size: 0.55rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 3px 8px;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
-.patent-status.granted { background: var(--green-accent); color: inherit; }
-.patent-status.filed { border: 1px solid var(--border); color: var(--ink-50); }
+.patent-status.granted { background: #82D576; color: #071A0F; font-weight: 800; }
+.patent-status.filed { border: 1px solid rgba(130, 213, 118, 0.5); color: #82D576; background: rgba(130, 213, 118, 0.1); }
 
 .patent-date {
-  font-size: 0.65rem;
-  color: var(--ink-50);
+  font-size: 0.72rem;
+  color: rgba(238, 244, 239, 0.8);
   letter-spacing: 0.04em;
 }
 
 .patent-title {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #FFFFFF;
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
 
 .patent-number {
-  font-size: 0.65rem;
-  color: var(--ink-50);
+  font-size: 0.72rem;
+  color: #82D576;
   letter-spacing: 0.06em;
   font-family: monospace;
+  font-weight: 600;
 }
 
 /* Responsive */

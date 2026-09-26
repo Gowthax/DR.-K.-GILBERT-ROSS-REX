@@ -143,17 +143,17 @@ const CollaborationSection = () => {
             </p>
           </div>
           
-          <div className="contact-detail-group" style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', gap: '30px', padding: '24px 32px' }}>
-            <span className="contact-detail-label" style={{ marginBottom: 0 }}>SOCIAL & RESEARCH</span>
-            <div className="social-links-row" style={{ display: 'flex', gap: '20px' }}>
-              <a href={profileData.contact.social.linkedin} target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="LinkedIn" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Briefcase size={18} /> LinkedIn
+          <div className="contact-detail-group social-group">
+            <span className="contact-detail-label">SOCIAL & RESEARCH</span>
+            <div className="social-links-row">
+              <a href={profileData.contact.social.linkedin} target="_blank" rel="noopener noreferrer" className="contact-link social-link" aria-label="LinkedIn">
+                <Briefcase size={18} /> <span>LinkedIn</span>
               </a>
-              <a href={profileData.contact.social.scholar} target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="Google Scholar" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <GraduationCap size={18} /> Google Scholar
+              <a href={profileData.contact.social.scholar} target="_blank" rel="noopener noreferrer" className="contact-link social-link" aria-label="Google Scholar">
+                <GraduationCap size={18} /> <span>Google Scholar</span>
               </a>
-              <a href={profileData.contact.social.researchgate} target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="ResearchGate" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <FlaskConical size={18} /> ResearchGate
+              <a href={profileData.contact.social.researchgate} target="_blank" rel="noopener noreferrer" className="contact-link social-link" aria-label="ResearchGate">
+                <FlaskConical size={18} /> <span>ResearchGate</span>
               </a>
             </div>
           </div>

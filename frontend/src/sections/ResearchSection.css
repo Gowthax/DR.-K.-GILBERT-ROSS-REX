@@ -1,13 +1,13 @@
 .rs-section {
   position: relative;
-  background: #0D1F10 !important;
-  color: #E8F5E8 !important;
+  background: #071A0F !important;
+  color: #FFFFFF !important;
   padding: 120px 0;
   overflow: hidden;
 }
 
 .rs-section .section-chapter-marker {
-  color: rgba(130, 213, 118, 0.07);
+  color: rgba(130, 213, 118, 0.08);
 }
 
 .rs-inner {
@@ -22,7 +22,7 @@
 }
 
 .rs-header .section-label {
-  color: var(--green-muted);
+  color: #82D576 !important;
 }
 
 .rs-heading {
@@ -31,14 +31,14 @@
   letter-spacing: -0.03em;
   line-height: 0.9;
   margin-top: 16px;
-  color: inherit;
+  color: #FFFFFF;
 }
 
 .rs-subheading {
   margin-top: 24px;
   font-size: 1rem;
   line-height: 1.6;
-  color: rgba(238, 244, 239, 0.55);
+  color: rgba(238, 244, 239, 0.85);
   max-width: 500px;
 }
 
@@ -47,13 +47,14 @@
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 0;
-  border: 1px solid rgba(238, 244, 239, 0.1);
+  border: 1px solid rgba(130, 213, 118, 0.25);
+  background: rgba(255, 255, 255, 0.02);
   min-height: 560px;
 }
 
 /* Domain Nav */
 .domain-nav {
-  border-right: 1px solid rgba(238, 244, 239, 0.1);
+  border-right: 1px solid rgba(130, 213, 118, 0.2);
   display: flex;
   flex-direction: column;
 }
@@ -63,12 +64,12 @@
   align-items: center;
   gap: 16px;
   padding: 24px 28px;
-  border-bottom: 1px solid rgba(238, 244, 239, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   text-align: left;
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s;
   position: relative;
-  color: inherit;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .domain-nav-item::before {
@@ -77,14 +78,15 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: var(--green-accent);
+  width: 3px;
+  background: #82D576;
   transform: scaleY(0);
   transition: transform 0.3s var(--ease-out);
 }
 
 .domain-nav-item.is-active {
-  background: rgba(238, 244, 239, 0.05);
+  background: rgba(130, 213, 118, 0.12);
+  color: #FFFFFF;
 }
 
 .domain-nav-item.is-active::before {
@@ -92,14 +94,14 @@
 }
 
 .domain-nav-item:hover {
-  background: rgba(238, 244, 239, 0.04);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .domain-num {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--green-muted);
+  color: #82D576;
   flex-shrink: 0;
 }
 
@@ -111,28 +113,28 @@
 }
 
 .domain-title {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 600;
   color: inherit;
   letter-spacing: 0.01em;
 }
 
 .domain-subtitle {
-  font-size: 0.65rem;
-  color: rgba(238, 244, 239, 0.4);
+  font-size: 0.68rem;
+  color: rgba(238, 244, 239, 0.75);
   letter-spacing: 0.02em;
 }
 
 .domain-arrow {
   font-size: 0.8rem;
-  color: rgba(238, 244, 239, 0.3);
+  color: rgba(130, 213, 118, 0.7);
   transition: color 0.3s, transform 0.3s;
   flex-shrink: 0;
 }
 
 .domain-nav-item.is-active .domain-arrow,
 .domain-nav-item:hover .domain-arrow {
-  color: var(--green-accent);
+  color: #82D576;
   transform: translateX(4px);
 }
 
@@ -152,18 +154,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.6) brightness(0.8);
+  filter: saturate(0.8) brightness(0.85);
   transition: filter 0.5s;
 }
 
 .rs-image-stage:hover .rs-domain-image {
-  filter: saturate(0.8) brightness(0.85);
+  filter: saturate(1) brightness(0.95);
 }
 
 .rs-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--ink) 0%, transparent 60%);
+  background: linear-gradient(to top, #071A0F 0%, transparent 60%);
 }
 
 .rs-image-label {
@@ -173,11 +175,14 @@
 }
 
 .active-pill {
-  font-size: 0.58rem;
-  font-weight: 600;
+  font-size: 0.62rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--green-accent);
+  color: #071A0F;
+  background: #82D576;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 .rs-domain-detail {
@@ -197,21 +202,22 @@
 .rs-domain-title {
   font-size: 1.6rem;
   font-weight: 400;
-  color: inherit;
+  color: #FFFFFF;
   letter-spacing: -0.01em;
 }
 
 .rs-domain-sub {
-  font-size: 0.75rem;
-  color: var(--green-muted);
+  font-size: 0.78rem;
+  color: #82D576;
   letter-spacing: 0.04em;
+  font-weight: 600;
 }
 
 .rs-domain-desc {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   line-height: 1.7;
-  color: rgba(238, 244, 239, 0.65);
-  max-width: 500px;
+  color: rgba(238, 244, 239, 0.9);
+  max-width: 550px;
 }
 
 .rs-key-areas {
@@ -222,11 +228,11 @@
 }
 
 .areas-label {
-  font-size: 0.6rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--green-muted);
+  color: #82D576;
 }
 
 .areas-tags {
@@ -236,18 +242,21 @@
 }
 
 .area-tag {
-  font-size: 0.68rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
   letter-spacing: 0.06em;
-  color: rgba(238, 244, 239, 0.7);
-  border: 1px solid rgba(238, 244, 239, 0.15);
-  padding: 5px 12px;
-  transition: border-color 0.3s, color 0.3s;
+  color: #FFFFFF;
+  border: 1px solid rgba(130, 213, 118, 0.35);
+  background: rgba(130, 213, 118, 0.08);
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: border-color 0.3s, background 0.3s;
 }
 
 .area-tag:hover {
-  border-color: var(--green-accent);
-  color: inherit;
+  border-color: #82D576;
+  background: rgba(130, 213, 118, 0.2);
+  color: #FFFFFF;
 }
 
 /* Projects */
@@ -258,13 +267,16 @@
 .projects-header { margin-bottom: 24px; }
 
 .projects-header .ap-sub-heading {
-  color: rgba(238, 244, 239, 0.4);
+  color: #82D576;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 .projects-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgba(238, 244, 239, 0.1);
+  border-top: 1px solid rgba(130, 213, 118, 0.2);
 }
 
 .project-strip {
@@ -273,12 +285,12 @@
   gap: 24px;
   align-items: center;
   padding: 24px 0;
-  border-bottom: 1px solid rgba(238, 244, 239, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: background 0.3s;
 }
 
 .project-strip:hover {
-  background: rgba(238, 244, 239, 0.03);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .project-strip-meta {
@@ -294,40 +306,43 @@
   text-transform: uppercase;
   padding: 3px 8px;
   align-self: flex-start;
+  border-radius: 3px;
 }
 
-.project-status.ongoing { background: var(--green-accent); color: inherit; }
-.project-status.completed { border: 1px solid rgba(238, 244, 239, 0.2); color: rgba(238, 244, 239, 0.6); }
+.project-status.ongoing { background: #82D576; color: #071A0F; font-weight: 800; }
+.project-status.completed { border: 1px solid rgba(255, 255, 255, 0.35); color: rgba(255, 255, 255, 0.85); }
 
 .project-funding {
   font-size: 1.1rem;
-  font-weight: 300;
-  color: inherit;
+  font-weight: 400;
+  color: #82D576;
   letter-spacing: -0.01em;
 }
 
 .project-strip-title {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: rgba(238, 244, 239, 0.85);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #FFFFFF;
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
 
 .project-strip-agency {
-  font-size: 0.72rem;
-  color: rgba(238, 244, 239, 0.4);
+  font-size: 0.78rem;
+  color: rgba(238, 244, 239, 0.75);
   margin-top: 4px;
 }
 
 .project-badge-tag {
-  font-size: 0.6rem;
-  font-weight: 600;
+  font-size: 0.62rem;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--green-accent);
-  border: 1px solid var(--green-accent);
-  padding: 4px 10px;
+  color: #071A0F;
+  background: #82D576;
+  border: 1px solid #82D576;
+  padding: 5px 12px;
+  border-radius: 4px;
   white-space: nowrap;
 }
 
@@ -338,7 +353,7 @@
   }
   .domain-nav {
     border-right: none;
-    border-bottom: 1px solid rgba(238, 244, 239, 0.1);
+    border-bottom: 1px solid rgba(130, 213, 118, 0.2);
     flex-direction: row;
     overflow-x: auto;
     scrollbar-width: none;
@@ -350,7 +365,7 @@
     min-width: 140px;
     padding: 16px;
     border-bottom: none;
-    border-right: 1px solid rgba(238, 244, 239, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
     align-items: flex-start;
   }
   .domain-nav-item::before {
@@ -359,7 +374,7 @@
     left: 0;
     right: 0;
     width: auto;
-    height: 2px;
+    height: 3px;
     transform: scaleX(0);
   }
   .domain-nav-item.is-active::before { transform: scaleX(1); }
