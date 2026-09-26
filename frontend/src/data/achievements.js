@@ -26,9 +26,9 @@ export const achievementsData = {
       category: "National Innovation Award",
       year: "2024–2025",
       institution: "Ministry of MSME, Govt. of India",
-      logo: "/logos/ai_healthcare_logo.svg",
+      logo: "/bamboo logo.png",
       image: "/award_msme_hackathon.jpg",
-      description: "Official award announcement recognizing Dr. K. Gilbert Ross Rex as Faculty Mentor for the winning project 'Sustainable Bamboo Syringe for a Green Future' awarded ₹10 Lakhs SEED Fund grant under MSME 4.0."
+      description: "Official award announcement recognizing Dr. K. Gilbert Ross Rex as Faculty Mentor for the winning project 'Sustainable Bamboo Syringe for a Green Future' awarded ₹10 Lakhs SEED Fund grant under MSME 4.0. Keywords: Sustainable Tech, Bamboo, Green Tech."
     },
     {
       id: "uba-project-sanction",
@@ -36,9 +36,10 @@ export const achievementsData = {
       category: "Government Research Grant",
       year: "2024",
       institution: "Unnat Bharat Abhiyan (UBA-SEG), Ministry of Education",
-      logo: "/logos/computational_biology_logo.svg",
+      logo: "/unnat_bharat_abhiyan_miranda_house_logo.jpg",
+      extraLogo: "/egg shell logo.png",
       image: "/award_uba_sanction.jpg",
-      description: "Official sanction notification for 'Poultry Egg Shell Formulation for Plant and Soil Health Management' under the UBA-SEG Scheme, appointing Dr. K. Gilbert Ross Rex as Project Coordinator."
+      description: "Official sanction notification for 'Poultry Egg Shell Formulation for Plant and Soil Health Management' under the UBA-SEG Scheme, appointing Dr. K. Gilbert Ross Rex as Project Coordinator. Focus: Egg Shell Bio Fertilizer."
     },
     {
       id: "uba-field-distribution",
@@ -46,7 +47,8 @@ export const achievementsData = {
       category: "Community & Rural Impact",
       year: "2024",
       institution: "Unnat Bharat Abhiyan Cell",
-      logo: "/logos/computational_biology_logo.svg",
+      logo: "/unnat_bharat_abhiyan_miranda_house_logo.jpg",
+      extraImage: "/biofertiler villiage.png",
       image: "/award_uba_field_handover.jpg",
       description: "Field deployment ceremony and direct distribution of eco-friendly bioformulations to local agricultural beneficiaries and farmers in rural outreach development."
     }
@@ -115,7 +117,7 @@ export const achievementsData = {
     { role: "NAAC Criteria VI In-Charge", dept: "Department of Biotechnology", desc: "Governance, leadership, and institutional management criteria execution." },
     { role: "NBA Criteria V In-Charge", dept: "Department of Biotechnology", desc: "Faculty contributions, academic enrichment, and outcome monitoring." },
     { role: "ISO Coordinator", dept: "Department of Biotechnology", desc: "Quality assurance management, procedural audits, and documentation." },
-    { role: "Genov Club Coordinator", dept: "Department of Biotechnology", desc: "Mentoring student biotechnology technical events and innovation challenges." },
+    { role: "Genov Club Coordinator", dept: "Department of Biotechnology", desc: "Mentoring student Biotechnology technical events and innovation challenges." },
     { role: "Mushroom Cultivation Farm In-Charge", dept: "Department of Biotechnology", desc: "Supervising research farm operations and entrepreneurship skill development." },
     { role: "Journal Peer Reviewer", dept: "Academic Community", desc: "Reviewer for the reputed Journal of Environmental Biology." },
     { role: "University Practical Examiner & Paper Setter", dept: "Anna University Zone-II", desc: "Centralized practical examinations and syllabus question evaluation." }

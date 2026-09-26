@@ -146,7 +146,7 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-side-label" aria-hidden="true">
-            <span>BIOTECHNOLOGY</span>
+            <span>Biotechnology</span>
             <span>RESEARCH</span>
             <span>ACADEMIA</span>
           </div>
@@ -160,31 +160,12 @@ const HeroSection = () => {
             ASSOCIATE PROFESSOR
           </div>
 
-          {/* ── TechText interactive name ── */}
+          {/* ── Text name ── */}
           <div
             className="hero-name-canvas-wrap"
             aria-label="Dr. K. Gilbert Ross Rex"
           >
-            {nameReady && (
-              <TechText
-                text="DR. K. GILBERT ROSS REX"
-                fontWeight={300}
-                fontSize={72}
-                letterSpacing={-0.03}
-                color="#0B2117"
-                accentColor="#8DA36D"
-                reveal="letter"
-                dashLength={4}
-                dashGap={2}
-                strokeWidth={1.2}
-                specks={12}
-                selection={true}
-                labels={true}
-                draggable={true}
-                sweep={true}
-                speed={0.7}
-              />
-            )}
+            <h1 style={{ fontSize: '72px', fontWeight: 300, letterSpacing: '-0.03em', color: '#0B2117', margin: 0 }}>DR. K. GILBERT ROSS REX</h1>
           </div>
 
           <div className="hero-institution-block">
@@ -202,7 +183,7 @@ const HeroSection = () => {
           <div className="hero-statement-wrap" aria-label="Research statement">
             <div className="hero-statement-border" aria-hidden="true" />
             <BlurText
-              text="Researching at the intersection of molecular biology, genetic engineering, plant biotechnology and environmental biotechnology."
+              text="Researching at the intersection of molecular biology, genetic engineering, plant Biotechnology and environmental Biotechnology."
               delay={60}
               animateBy="words"
               direction="bottom"

@@ -81,7 +81,7 @@ const Research = () => {
               <span className="featured-subtitle">{activeDomain.subtitle}</span>
             </div>
             
-            <p className="featured-description">{activeDomain.description}</p>
+            <p className="featured-description" dangerouslySetInnerHTML={{ __html: activeDomain.description }}></p>
 
             <div className="key-areas-section">
               <span className="areas-header">INVESTIGATION FOCUS AREAS</span>
@@ -103,7 +103,7 @@ const Research = () => {
         <div className="section-title-wrap">
           <h2 className="section-heading">Funded Research Projects & Grants</h2>
           <p className="section-subtitle">
-            Government and institution-sponsored research programs developing sustainable biotechnology solutions.
+            Government and institution-sponsored research programs developing sustainable Biotechnology solutions.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ const Research = () => {
                 <span className="project-funding-amt">{project.funding}</span>
               </div>
               
-              <h3 className="project-title">{project.title}</h3>
+              <h3 className="project-title" dangerouslySetInnerHTML={{ __html: project.title }} />
               
               <div className="project-meta-box">
                 <div className="meta-line">

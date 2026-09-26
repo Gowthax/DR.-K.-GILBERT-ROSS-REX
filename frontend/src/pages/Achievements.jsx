@@ -114,8 +114,17 @@ const Achievements = () => {
             <div className="lightbox-caption">
               <span className="lightbox-cat">{selectedImage.category} • {selectedImage.year}</span>
               <h2 className="lightbox-title">{selectedImage.title}</h2>
-              <p className="lightbox-inst">{selectedImage.institution}</p>
+              <div className="lightbox-inst-row" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '15px' }}>
+                {selectedImage.logo && <img src={selectedImage.logo} alt={selectedImage.institution} style={{ width: '40px', height: '40px', objectFit: 'contain' }} />}
+                {selectedImage.extraLogo && <img src={selectedImage.extraLogo} alt="Additional Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />}
+                <p className="lightbox-inst" style={{ margin: 0 }}>{selectedImage.institution}</p>
+              </div>
               <p className="lightbox-desc">{selectedImage.description}</p>
+              {selectedImage.extraImage && (
+                <div style={{ marginTop: '20px' }}>
+                  <img src={selectedImage.extraImage} alt="Additional Event Image" style={{ width: '100%', borderRadius: '12px' }} />
+                </div>
+              )}
             </div>
           </div>
         </div>

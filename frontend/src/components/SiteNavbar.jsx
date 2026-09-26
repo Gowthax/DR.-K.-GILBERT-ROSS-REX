@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './SiteNavbar.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,6 +13,7 @@ const navItems = [
   { label: '04 — PUBLICATIONS',id: 'publications' },
   { label: '05 — ACHIEVEMENTS',id: 'achievements' },
   { label: '06 — CONTACT',     id: 'collaboration' },
+  { label: '07 — CERTIFICATIONS', id: 'certifications', route: '/certifications' }
 ];
 
 const SiteNavbar = () => {
@@ -20,6 +22,8 @@ const SiteNavbar = () => {
   const [activeId, setActiveId] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     // Scroll progress bar
@@ -33,7 +37,8 @@ const SiteNavbar = () => {
     };
 
     // Active section detection
-    const observers = navItems.map(({ id }) => {
+    const observers = navItems.map(({ id, route }) => {
+      if (route) return null;
       const el = document.getElementById(id);
       if (!el) return null;
       const observer = new IntersectionObserver(
@@ -55,10 +60,24 @@ const SiteNavbar = () => {
     };
   }, []);
 
-  const scrollTo = (id) => {
+  const scrollTo = (item) => {
     setMobileMenuOpen(false);
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (item.route) {
+      navigate(item.route);
+      setActiveId(item.id);
+      return;
+    }
+    
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById(item.id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else {
+      const el = document.getElementById(item.id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -67,20 +86,20 @@ const SiteNavbar = () => {
       <div className="nav-progress-bar" ref={progressRef} />
 
       <div className="nav-inner">
-        <button className="nav-logo" onClick={() => scrollTo('hero')} aria-label="Go to top">
+        <button className="nav-logo" onClick={() => scrollTo({ id: 'hero' })} aria-label="Go to top">
           DR. K. GILBERT ROSS REX
         </button>
 
         {/* Desktop nav links */}
         <ul className="nav-links" role="list">
-          {navItems.map(({ label, id }) => (
-            <li key={id}>
+          {navItems.map((item) => (
+            <li key={item.id}>
               <button
-                className={`nav-item ${activeId === id ? 'is-active' : ''}`}
-                onClick={() => scrollTo(id)}
-                aria-current={activeId === id ? 'true' : undefined}
+                className={`nav-item ${activeId === item.id ? 'is-active' : ''}`}
+                onClick={() => scrollTo(item)}
+                aria-current={activeId === item.id ? 'true' : undefined}
               >
-                {label}
+                {item.label}
               </button>
             </li>
           ))}
@@ -107,14 +126,14 @@ const SiteNavbar = () => {
       <div className={`mobile-menu-drawer ${mobileMenuOpen ? 'is-active' : ''}`}>
         <div className="mobile-drawer-header">NAVIGATE SECTIONS</div>
         <ul className="mobile-drawer-links">
-          {navItems.map(({ label, id }) => (
-            <li key={id}>
+          {navItems.map((item) => (
+            <li key={item.id}>
               <button
-                className={`mobile-drawer-item ${activeId === id ? 'is-active' : ''}`}
-                onClick={() => scrollTo(id)}
+                className={`mobile-drawer-item ${activeId === item.id ? 'is-active' : ''}`}
+                onClick={() => scrollTo(item)}
               >
-                <span>{label}</span>
-                {activeId === id && <span className="active-dot">✦</span>}
+                <span>{item.label}</span>
+                {activeId === item.id && <span className="active-dot">✦</span>}
               </button>
             </li>
           ))}

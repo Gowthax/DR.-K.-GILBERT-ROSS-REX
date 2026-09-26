@@ -271,7 +271,7 @@ const Home = () => {
           {/* Vertical academic label */}
 
           <div className="portrait-side-label">
-            <span>BIOTECHNOLOGY</span>
+            <span>Biotechnology</span>
             <span>RESEARCH</span>
             <span>ACADEMIA</span>
           </div>
@@ -280,7 +280,7 @@ const Home = () => {
 
           <div className="portrait-category">
             <span className="category-dot" />
-            <span>BIOTECHNOLOGY RESEARCH</span>
+            <span>Biotechnology RESEARCH</span>
           </div>
 
         </div>

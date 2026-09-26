@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { achievementsData } from '../data/achievements';
+import { certifications } from '../data/certifications';
 import BlurText from '../components/BlurText';
 import './AchievementsSection.css';
 
@@ -127,19 +128,26 @@ const AchievementsSection = () => {
 
         {/* Faculty Certifications */}
         <div className="certifications-block">
-          <div className="cert-header-row">
-            <h3 className="ap-sub-heading">FACULTY CERTIFICATIONS &amp; DEVELOPMENT</h3>
-            <span className="cert-count">{achievementsData.facultyCertifications.length} CREDENTIALS</span>
+          <div className="cert-header-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+            <h3 className="ap-sub-heading" style={{ margin: 0 }}>FACULTY CERTIFICATIONS &amp; DEVELOPMENT</h3>
+            <span className="cert-count">{certifications.length} CREDENTIALS</span>
           </div>
-          <div className="cert-list">
-            {achievementsData.facultyCertifications.map((cert, i) => (
-              <div key={i} className="cert-row">
-                <div className="cert-agency-wrap">
-                  {cert.logo && <img src={cert.logo} alt={cert.agency} className="cert-agency-logo" />}
-                  <span className={`cert-agency ${cert.agency.toLowerCase().replace(/\s+/g, '-')}`}>{cert.agency}</span>
+          <div className="cert-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
+            {certifications.map((cert) => (
+              <div key={cert.id} className="cert-card glass-panel" style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+                <div className="cert-pdf-preview" style={{ width: '100%', height: '250px', background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--border-light)' }}>
+                  {cert.pdf.toLowerCase().endsWith('.pdf') ? (
+                    <embed src={cert.pdf} type="application/pdf" width="100%" height="250px" style={{ pointerEvents: 'none' }} />
+                  ) : (
+                    <img src={cert.pdf} alt={cert.title} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+                  )}
                 </div>
-                <span className="cert-title">{cert.title}</span>
-                <span className="cert-focus">{cert.focus}</span>
+                <div className="cert-info" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
+                  <h3 style={{ fontFamily: '"Outfit", sans-serif', fontSize: '1.25rem', fontWeight: 400, marginBottom: '1.5rem', lineHeight: 1.3 }}>{cert.title}</h3>
+                  <a href={cert.pdf} target="_blank" rel="noopener noreferrer" className="cert-btn" style={{ alignSelf: 'flex-start', padding: '0.75rem 1.5rem', border: '1px solid var(--color-accent)', color: 'var(--color-accent)', borderRadius: '4px', textDecoration: 'none', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.1em' }}>
+                    View Full Screen
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -196,9 +204,15 @@ const AchievementsSection = () => {
               <h2 className="lightbox-title">{lightboxItem.title}</h2>
               <div className="lightbox-inst-row">
                 {lightboxItem.logo && <img src={lightboxItem.logo} alt={lightboxItem.institution} className="lightbox-inst-logo" />}
+                {lightboxItem.extraLogo && <img src={lightboxItem.extraLogo} alt="Additional Logo" className="lightbox-inst-logo extra-logo" style={{marginLeft: '10px'}} />}
                 <p className="lightbox-inst">{lightboxItem.institution}</p>
               </div>
               <p className="lightbox-desc">{lightboxItem.description}</p>
+              {lightboxItem.extraImage && (
+                <div className="lightbox-extra-img-wrap" style={{marginTop: '20px'}}>
+                  <img src={lightboxItem.extraImage} alt="Additional Event Image" style={{width: '100%', borderRadius: '12px'}} />
+                </div>
+              )}
             </div>
           </div>
         </div>

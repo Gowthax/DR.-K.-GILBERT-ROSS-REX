@@ -1,13 +1,13 @@
 .rs-section {
   position: relative;
-  background: var(--ink);
-  color: var(--bg);
+  background: #0D1F10 !important;
+  color: #E8F5E8 !important;
   padding: 120px 0;
   overflow: hidden;
 }
 
 .rs-section .section-chapter-marker {
-  color: rgba(238, 244, 239, 0.04);
+  color: rgba(130, 213, 118, 0.07);
 }
 
 .rs-inner {
@@ -31,7 +31,7 @@
   letter-spacing: -0.03em;
   line-height: 0.9;
   margin-top: 16px;
-  color: var(--bg);
+  color: inherit;
 }
 
 .rs-subheading {
@@ -68,7 +68,7 @@
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s;
   position: relative;
-  color: var(--bg);
+  color: inherit;
 }
 
 .domain-nav-item::before {
@@ -113,7 +113,7 @@
 .domain-title {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--bg);
+  color: inherit;
   letter-spacing: 0.01em;
 }
 
@@ -197,7 +197,7 @@
 .rs-domain-title {
   font-size: 1.6rem;
   font-weight: 400;
-  color: var(--bg);
+  color: inherit;
   letter-spacing: -0.01em;
 }
 
@@ -247,7 +247,7 @@
 
 .area-tag:hover {
   border-color: var(--green-accent);
-  color: var(--bg);
+  color: inherit;
 }
 
 /* Projects */
@@ -296,13 +296,13 @@
   align-self: flex-start;
 }
 
-.project-status.ongoing { background: var(--green-accent); color: var(--ink); }
+.project-status.ongoing { background: var(--green-accent); color: inherit; }
 .project-status.completed { border: 1px solid rgba(238, 244, 239, 0.2); color: rgba(238, 244, 239, 0.6); }
 
 .project-funding {
   font-size: 1.1rem;
   font-weight: 300;
-  color: var(--bg);
+  color: inherit;
   letter-spacing: -0.01em;
 }
 

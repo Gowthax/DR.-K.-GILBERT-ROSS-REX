@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { profileData } from '../data/profile';
+import { Briefcase, GraduationCap, FlaskConical } from 'lucide-react';
+import ContactGraphics from '../components/ContactGraphics';
 import './CollaborationSection.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,7 +35,7 @@ const CollaborationSection = () => {
         { opacity: 0, x: -20 },
         {
           opacity: 1, x: 0, duration: 0.8, ease: 'power2.out', stagger: 0.12,
-          scrollTrigger: { trigger: '.contact-details-grid', start: 'top 80%' }
+          scrollTrigger: { trigger: '.contact-details-grid', start: 'top 95%' }
         }
       );
 
@@ -41,7 +43,7 @@ const CollaborationSection = () => {
         { opacity: 0, y: 30 },
         {
           opacity: 1, y: 0, duration: 1, ease: 'power3.out',
-          scrollTrigger: { trigger: '.collab-cta-wrap', start: 'top 85%' }
+          scrollTrigger: { trigger: '.collab-cta-wrap', start: 'top 95%' }
         }
       );
     }, sectionRef);
@@ -140,8 +142,26 @@ const CollaborationSection = () => {
               ))}
             </p>
           </div>
+          
+          <div className="contact-detail-group" style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start', gap: '30px', padding: '24px 32px' }}>
+            <span className="contact-detail-label" style={{ marginBottom: 0 }}>SOCIAL & RESEARCH</span>
+            <div className="social-links-row" style={{ display: 'flex', gap: '20px' }}>
+              <a href={profileData.contact.social.linkedin} target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="LinkedIn" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Briefcase size={18} /> LinkedIn
+              </a>
+              <a href={profileData.contact.social.scholar} target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="Google Scholar" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <GraduationCap size={18} /> Google Scholar
+              </a>
+              <a href={profileData.contact.social.researchgate} target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="ResearchGate" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <FlaskConical size={18} /> ResearchGate
+              </a>
+            </div>
+          </div>
 
         </div>
+
+        {/* 3D Graphics overlay */}
+        <ContactGraphics />
 
         {/* CTA */}
         <div className="collab-cta-wrap">

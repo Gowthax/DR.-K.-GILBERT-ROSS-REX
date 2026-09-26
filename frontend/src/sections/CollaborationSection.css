@@ -1,6 +1,6 @@
 .collab-section {
   position: relative;
-  background: var(--bg);
+  background: transparent;
   padding: 120px 0 80px;
   overflow: hidden;
   border-top: 1px solid var(--border-light);
@@ -21,7 +21,7 @@
   letter-spacing: -0.03em;
   line-height: 0.9;
   margin-top: 16px;
-  color: var(--ink);
+  color: inherit;
 }
 
 .collab-sub-items {
@@ -59,17 +59,21 @@
 
 .contact-detail-group {
   padding: 32px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border-light);
-  background: var(--bg);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  transition: background 0.3s, border-color 0.3s;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .contact-detail-group:hover {
-  background: var(--bg-dark);
+  background: rgba(255, 255, 255, 0.08);
   border-color: var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .contact-detail-label {
@@ -89,7 +93,7 @@
 .contact-link {
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--ink);
+  color: inherit;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   display: inline-block;
@@ -122,18 +126,23 @@
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--bg);
-  background: var(--ink);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
   padding: 20px 40px;
   text-decoration: none;
-  transition: background 0.4s, transform 0.4s var(--ease-out), box-shadow 0.4s;
+  transition: all 0.4s var(--ease-out);
   will-change: transform;
   position: relative;
 }
 
 .collab-cta-button:hover {
-  background: var(--green-deep);
-  box-shadow: 0 12px 40px rgba(11, 33, 23, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(130, 213, 118, 0.5);
+  box-shadow: 0 12px 40px rgba(130, 213, 118, 0.15);
 }
 
 .cta-arrow {

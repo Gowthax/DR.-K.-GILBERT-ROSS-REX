@@ -1,6 +1,6 @@
 .site-footer {
-  background: var(--ink);
-  color: var(--bg);
+  background: transparent;
+  color: inherit;
   padding: 48px 5%;
   border-top: 1px solid rgba(238, 244, 239, 0.1);
 }
@@ -45,7 +45,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--bg);
+  color: inherit;
 }
 
 .footer-role {
@@ -97,7 +97,7 @@
   border-bottom: 1px solid rgba(238, 244, 239, 0.15);
 }
 
-.back-to-top:hover { color: var(--bg); }
+.back-to-top:hover { color: inherit; }
 
 @media (max-width: 600px) {
   .footer-inner {

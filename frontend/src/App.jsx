@@ -13,7 +13,21 @@ import AchievementsSection from './sections/AchievementsSection';
 import ImpactSection from './sections/ImpactSection';
 import CollaborationSection from './sections/CollaborationSection';
 import SiteFooter from './components/SiteFooter';
+import CertificationsPage from './pages/CertificationsPage';
+import { Routes, Route } from 'react-router-dom';
 import './index.css';
+
+const MainContent = () => (
+  <main id="main-content">
+    <HeroSection />
+    <AcademicProfileSection />
+    <ResearchSection />
+    <PublicationsSection />
+    <ImpactSection />
+    <AchievementsSection />
+    <CollaborationSection />
+  </main>
+);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,15 +59,10 @@ function App() {
       <Preloader />
       <CustomCursor />
       <SiteNavbar />
-      <main id="main-content">
-        <HeroSection />
-        <AcademicProfileSection />
-        <ResearchSection />
-        <PublicationsSection />
-        <ImpactSection />
-        <AchievementsSection />
-        <CollaborationSection />
-      </main>
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/certifications" element={<CertificationsPage />} />
+      </Routes>
       <SiteFooter />
     </div>
   );

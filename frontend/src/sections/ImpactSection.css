@@ -1,6 +1,7 @@
 .impact-section {
   position: relative;
-  background: var(--green-deep);
+  background: #0D1F10;
+  color: #E8F5E8;
   padding: 100px 0;
   overflow: hidden;
 }
@@ -61,7 +62,7 @@
   font-weight: 200;
   letter-spacing: -0.04em;
   line-height: 0.85;
-  color: var(--bg);
+  color: inherit;
 }
 
 .impact-meta {

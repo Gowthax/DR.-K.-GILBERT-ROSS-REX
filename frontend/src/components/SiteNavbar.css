@@ -10,10 +10,10 @@
 }
 
 .site-navbar.is-scrolled {
-  background: rgba(238, 244, 239, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-light);
+  background: rgba(168, 201, 158, 0.80);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.40);
   height: 60px;
 }
 
@@ -42,7 +42,7 @@
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--ink);
+  color: inherit;
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity 0.3s;
@@ -76,14 +76,14 @@
   left: 0;
   width: 0;
   height: 1.5px;
-  background: var(--ink);
+  background: transparent;
   transition: width 0.4s var(--ease-out);
 }
 
-.nav-item:hover { color: var(--ink); }
+.nav-item:hover { color: inherit; }
 
 .nav-item.is-active {
-  color: var(--ink);
+  color: inherit;
 }
 
 .nav-item.is-active::after {
@@ -122,7 +122,7 @@
 .hamburger-line {
   width: 18px;
   height: 1.5px;
-  background: var(--ink);
+  background: transparent;
   transition: transform 0.3s var(--ease-out), opacity 0.3s;
 }
 
@@ -141,7 +141,7 @@
   top: 56px;
   left: 0;
   right: 0;
-  background: var(--bg);
+  background: transparent;
   border-bottom: 1px solid var(--border);
   padding: 20px 6%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -187,7 +187,7 @@
 
 .mobile-drawer-item.is-active {
   background: rgba(5, 150, 105, 0.1);
-  color: var(--ink);
+  color: inherit;
   border-color: var(--green-accent);
 }
 

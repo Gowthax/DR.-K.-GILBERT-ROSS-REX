@@ -288,7 +288,7 @@ const Preloader = ({ onComplete }) => {
         {/* Scene 01: Institution Badge */}
         <div className="preloader-badge" ref={badgeRef}>
           <img src="/logos/sethu_logo.png" alt="Sethu Institute of Technology Logo" className="preloader-inst-logo" />
-          <span>DEPARTMENT OF BIOTECHNOLOGY · SETHU INSTITUTE OF TECHNOLOGY (AUTONOMOUS)</span>
+          <span>DEPARTMENT OF Biotechnology · SETHU INSTITUTE OF TECHNOLOGY (AUTONOMOUS)</span>
         </div>
 
         {/* Crisp Line Divider */}
@@ -301,7 +301,7 @@ const Preloader = ({ onComplete }) => {
 
         {/* Subtitle / Designation with expanding letter spacing */}
         <div className="preloader-subtitle-wrap" ref={subtitleRef}>
-          <span>ASSOCIATE PROFESSOR OF BIOTECHNOLOGY</span>
+          <span>ASSOCIATE PROFESSOR OF Biotechnology</span>
         </div>
 
         {/* Scene 03: Scientific Keyword Streak */}

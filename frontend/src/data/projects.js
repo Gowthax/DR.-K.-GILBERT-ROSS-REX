@@ -16,7 +16,7 @@ export const projectsData = [
     awardBadge: "UBA-SEG Project Sanction"
   },
   {
-    title: "Valorization of Fish Waste and Prosopis Juliflora for the Production of Biodegradable Food Packaging",
+    title: "Valorization of Fish Waste and <em>Prosopis juliflora</em> for the Production of Biodegradable Food Packaging",
     funding: "₹10,000",
     agency: "Naan Mudhalvan Niral Thiruvizha",
     status: "Completed",
@@ -35,35 +35,35 @@ export const projectsData = [
 
 export const researchDomains = [
   {
-    id: "molecular",
-    title: "Molecular Biology",
-    subtitle: "Macromolecular Interactions & Proteomics",
-    image: "/research/molecular.jpg",
-    description: "Investigating DNA-protein interactions, structural biology, cellular gene expression mechanisms, and molecular diagnostics for clinical and agricultural applications.",
-    keyAreas: ["DNA-Protein Binding", "Structural Biology", "Molecular Diagnostics", "Gene Expression Profiling"]
+    id: "plant_tissue",
+    title: "Plant Tissue Culture",
+    subtitle: "In vitro Propagation & Micropropagation",
+    image: "/research/plant new.png",
+    description: "Advanced techniques for the sterile in vitro cultivation of plant cells, tissues, and organs under controlled environmental and nutritional conditions.",
+    keyAreas: ["Micropropagation", "Callus Culture", "Pathogen-Free Plants", "In Vitro Conservation"]
   },
   {
-    id: "genetic",
-    title: "Genetic Engineering",
-    subtitle: "CRISPR & Recombinant DNA Systems",
-    image: "/research/genetic.jpg",
-    description: "Advanced recombinant DNA technology, gene cloning, expression vector design, and molecular characterization for sustainable trait optimization in host organisms.",
-    keyAreas: ["Recombinant Cloning", "Targeted Gene Modulation", "Expression Vectors", "Transgenic Systems"]
+    id: "pharma",
+    title: "Pharmaceutical Biotechnology",
+    subtitle: "Drug Discovery & Biotherapeutics",
+    image: "/research/Pharmaceutical Biotechnology.png",
+    description: "Development and optimization of biopharmaceuticals, targeted drug delivery systems, and therapeutic proteins leveraging molecular tools for clinical advancements.",
+    keyAreas: ["Biotherapeutics", "Drug Delivery Systems", "Therapeutic Proteins", "Pre-clinical Trials"]
   },
   {
-    id: "plant",
-    title: "Plant Biotechnology",
-    subtitle: "Agri-Bioformulations & Tissue Culture",
-    image: "/research/plant.jpg",
-    description: "Developing novel organic bioformulations, eggshell-derived bio-calcium soil conditioners, plant micropropagation, and sustainable crop resilience systems.",
-    keyAreas: ["Bio-stimulant Formulations", "Tissue Culture Protocols", "Soil Health Management", "Phytochemical Profiling"]
+    id: "agri",
+    title: "Plant and Agriculture Biotechnology",
+    subtitle: "Crop Resilience & Sustainable Farming",
+    image: "/research/Plant and Agriculture Biotechnology.png",
+    description: "Enhancing crop productivity and stress tolerance through molecular breeding, transgenic approaches, and the development of sustainable agricultural bio-inputs.",
+    keyAreas: ["Molecular Breeding", "Crop Resilience", "Bio-inputs", "Transgenic Crops"]
   },
   {
     id: "environmental",
     title: "Environmental Biotechnology",
     subtitle: "Bioplastics & Waste Valorization",
     image: "/research/environmental.jpg",
-    description: "Valorizing organic fisheries waste and invasive Prosopis juliflora biomass into fully biodegradable food packaging films, biopolymers, and green materials.",
+    description: "Valorizing organic fisheries waste and invasive <em>Prosopis juliflora</em> biomass into fully biodegradable food packaging films, biopolymers, and green materials.",
     keyAreas: ["Biodegradable Polymers", "Biomass Upcycling", "Waste-to-Resource", "Eco-Friendly Packaging"]
   },
   {
@@ -75,11 +75,11 @@ export const researchDomains = [
     keyAreas: ["Biocontrol Strains", "Microbial Screening", "Probiotic Assays", "Antimicrobial Profiling"]
   },
   {
-    id: "bioprocess",
-    title: "Bioprocess Engineering",
-    subtitle: "Bioreactor Scale-Up & Downstream Dynamics",
-    image: "/research/bioprocess.jpg",
-    description: "Industrial fermentation parameters, stirred tank bioreactor optimization, nutrient broth kinetics, downstream purification, and pilot-scale biotechnology processes.",
-    keyAreas: ["Fermentation Dynamics", "Bioreactor Optimization", "Yield Enhancement", "Downstream Processing"]
+    id: "biofertilizer",
+    title: "Biofertilizer Technology",
+    subtitle: "Microbial Inoculants & Soil Health",
+    image: "/research/biofertilizer tech.png",
+    description: "Formulation and scale-up of beneficial microbial inoculants, symbiotic nitrogen fixers, and phosphate solubilizers to restore soil fertility and reduce chemical dependencies.",
+    keyAreas: ["Microbial Inoculants", "Soil Fertility", "Nitrogen Fixers", "Phosphate Solubilization"]
   }
 ];

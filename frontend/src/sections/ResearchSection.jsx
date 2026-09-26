@@ -93,7 +93,7 @@ const ResearchSection = () => {
             RESEARCH<br />DOMAINS
           </h2>
           <BlurText
-            text="Translational biotechnology across molecular, genetic, agricultural and environmental systems."
+            text="Translational Biotechnology across molecular, genetic, agricultural and environmental systems."
             delay={55}
             animateBy="words"
             direction="bottom"
@@ -148,7 +148,7 @@ const ResearchSection = () => {
                 <h3 className="rs-domain-title">{activeDomain.title}</h3>
                 <span className="rs-domain-sub">{activeDomain.subtitle}</span>
               </div>
-              <p className="rs-domain-desc">{activeDomain.description}</p>
+              <p className="rs-domain-desc" dangerouslySetInnerHTML={{ __html: activeDomain.description }}></p>
               <div className="rs-key-areas">
                 <span className="areas-label">INVESTIGATION AREAS</span>
                 <div className="areas-tags">
@@ -177,7 +177,7 @@ const ResearchSection = () => {
                   <span className="project-funding">{project.funding}</span>
                 </div>
                 <div className="project-strip-body">
-                  <h4 className="project-strip-title">{project.title}</h4>
+                  <h4 className="project-strip-title" dangerouslySetInnerHTML={{ __html: project.title }} />
                   <p className="project-strip-agency">{project.agency}</p>
                 </div>
                 <span className="project-badge-tag">{project.awardBadge}</span>

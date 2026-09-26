@@ -68,7 +68,7 @@ const ImpactSection = () => {
 
   const stats = [
     { number: '27', suffix: '', label: 'PUBLICATIONS', desc: 'Journal articles, book chapters & reviews' },
-    { number: '2', suffix: '', label: 'GRANTED PATENTS', desc: 'Indian Patents — biotechnology innovations' },
+    { number: '2', suffix: '', label: 'GRANTED PATENTS', desc: 'Indian Patents — Biotechnology innovations' },
     { number: '42', suffix: '+', label: 'RESEARCHERS GUIDED', desc: 'UG + PG research scholars mentored' },
     { number: '8', suffix: '+', label: 'YEARS EXPERIENCE', desc: 'Academic teaching & research career' },
   ];

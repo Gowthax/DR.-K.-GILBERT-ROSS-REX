@@ -1,6 +1,7 @@
 .pub-section {
   position: relative;
-  background: var(--bg);
+  background: #0D1F10;
+  color: #E8F5E8;
   padding: 120px 0;
   overflow: hidden;
 }
@@ -27,7 +28,7 @@
   font-weight: 200;
   letter-spacing: -0.03em;
   line-height: 0.9;
-  color: var(--ink);
+  color: inherit;
 }
 
 .pub-count-display {
@@ -74,18 +75,18 @@
   padding: 7px 16px;
   cursor: pointer;
   transition: all 0.25s;
-  background: var(--bg);
+  background: transparent;
 }
 
 .pub-filter-btn:hover {
-  color: var(--ink);
+  color: inherit;
   border-color: var(--border);
 }
 
 .pub-filter-btn.is-active {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
+  background: transparent;
+  color: inherit;
+  border-color: inherit;
 }
 
 /* Publication stream */
@@ -125,7 +126,7 @@
 .pub-year {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--ink);
+  color: inherit;
   letter-spacing: 0.02em;
 }
 
@@ -142,7 +143,7 @@
 .pub-title {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--ink);
+  color: inherit;
   line-height: 1.5;
   letter-spacing: -0.01em;
   transition: color 0.3s;
@@ -167,7 +168,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: inherit;
   border-bottom: 1px solid var(--border);
   padding-bottom: 2px;
   transition: color 0.3s, border-color 0.3s;
@@ -195,7 +196,7 @@
 .patent-card-item {
   padding: 28px;
   border: 1px solid var(--border-light);
-  background: var(--bg);
+  background: transparent;
   transition: background 0.3s, border-color 0.3s;
   display: flex;
   flex-direction: column;
@@ -222,7 +223,7 @@
   padding: 3px 8px;
 }
 
-.patent-status.granted { background: var(--green-accent); color: var(--ink); }
+.patent-status.granted { background: var(--green-accent); color: inherit; }
 .patent-status.filed { border: 1px solid var(--border); color: var(--ink-50); }
 
 .patent-date {
@@ -234,7 +235,7 @@
 .patent-title {
   font-size: 0.85rem;
   font-weight: 400;
-  color: var(--ink);
+  color: inherit;
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
