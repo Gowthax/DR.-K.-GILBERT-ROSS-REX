@@ -165,7 +165,7 @@ const HeroSection = () => {
             className="hero-name-canvas-wrap"
             aria-label="Dr. K. Gilbert Ross Rex"
           >
-            <h1 style={{ fontSize: '72px', fontWeight: 300, letterSpacing: '-0.03em', color: '#0B2117', margin: 0 }}>DR. K. GILBERT ROSS REX</h1>
+            <h1 className="hero-name">DR. K. GILBERT ROSS REX</h1>
           </div>
 
           <div className="hero-institution-block">
