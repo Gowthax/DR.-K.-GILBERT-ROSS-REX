@@ -1,6 +1,4 @@
-@media (pointer: fine) {
-  * { cursor: none !important; }
-}
+
 
 .cursor-ring {
   position: fixed;
@@ -24,7 +22,7 @@
   width: 72px;
   height: 72px;
   border-color: inherit;
-  background: rgba(11, 33, 23, 0.06);
+  background: rgba(43, 40, 34, 0.06);
 }
 
 .cursor-dot {

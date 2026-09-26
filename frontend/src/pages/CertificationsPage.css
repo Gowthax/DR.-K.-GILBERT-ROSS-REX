@@ -1,7 +1,7 @@
 .certifications-page {
   padding: 120px 5vw 80px;
-  background: transparent;
-  color: inherit;
+  background-color: var(--bg);
+  color: var(--ink);
 }
 
 .cert-container {
@@ -82,8 +82,8 @@
 .cert-btn {
   align-self: flex-start;
   padding: 0.75rem 1.5rem;
-  background: transparent;
-  color: inherit;
+  background-color: transparent;
+  color: var(--ink);
   border: 1px solid var(--ink);
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
@@ -95,8 +95,8 @@
 }
 
 .cert-btn:hover {
-  background-color: inherit;
-  color: inherit;
+  background-color: var(--ink);
+  color: var(--bg);
 }
 
 @media (max-width: 768px) {

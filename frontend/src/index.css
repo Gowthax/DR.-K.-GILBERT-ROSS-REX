@@ -4,34 +4,36 @@
    DESIGN TOKENS — Dr. K. Gilbert Ross Rex Portfolio
    ============================================================ */
 :root {
-  /* Palette — Soft Sage Green (complements warm skin tones) */
-  --bg:            #A8C99E;
-  --bg-dark:       #96BA8B;
-  --ink:           #1A2D1A;
-  --ink-80:        rgba(26, 45, 26, 0.80);
-  --ink-50:        rgba(26, 45, 26, 0.50);
-  --ink-30:        rgba(26, 45, 26, 0.30);
-  --ink-12:        rgba(26, 45, 26, 0.12);
-  --ink-06:        rgba(26, 45, 26, 0.06);
+  /* Palette — Premium Cream (Sunset, Cream, Vanilla, Khaki) */
+  --bg:            #FFFDD0; /* Cream */
+  --bg-dark:       #F3E5AB; /* Vanilla */
+  
+  /* Ink is a very dark warm brown derived from Khaki for contrast */
+  --ink:           #2B2822; 
+  --ink-80:        rgba(43, 40, 34, 0.80);
+  --ink-50:        rgba(43, 40, 34, 0.50);
+  --ink-30:        rgba(43, 40, 34, 0.30);
+  --ink-12:        rgba(43, 40, 34, 0.12);
+  --ink-06:        rgba(43, 40, 34, 0.06);
 
-  /* Dark section palette */
-  --dark-bg:       #0D1F10;
-  --dark-bg-mid:   #142818;
-  --dark-ink:      #E8F5E8;
-  --dark-ink-70:   rgba(232, 245, 232, 0.70);
-  --dark-ink-40:   rgba(232, 245, 232, 0.40);
+  /* Dark section palette (Using Khaki as the dark background) */
+  --dark-bg:       #9D9679; /* Khaki */
+  --dark-bg-mid:   #8C856B; 
+  --dark-ink:      #FFFDD0; /* Cream */
+  --dark-ink-70:   rgba(255, 253, 208, 0.70);
+  --dark-ink-40:   rgba(255, 253, 208, 0.40);
 
-  /* Accent green */
-  --green-deep:    #2D5016;
-  --green-mid:     #4A7C2F;
-  --green-muted:   #5E8A47;
-  --green-sage:    #C8DFC3;
-  --green-accent:  #4A7C2F;
+  /* Accent colors (replacing green variables but keeping names to prevent breaking) */
+  --green-deep:    #4A4533; /* Dark earthy tone */
+  --green-mid:     #7A7358;
+  --green-muted:   #68624C; /* Good contrast for labels */
+  --green-sage:    #F2D5AA; /* Sunset Light */
+  --green-accent:  #F2D09D; /* Sunset Deep */
 
-  /* Glassmorphism — frosted panels on sage bg */
-  --border:        rgba(26, 45, 26, 0.18);
-  --border-light:  rgba(26, 45, 26, 0.10);
-  --glass-bg:      rgba(255, 255, 255, 0.30);
+  /* Glassmorphism — frosted panels on cream bg */
+  --border:        rgba(43, 40, 34, 0.15);
+  --border-light:  rgba(43, 40, 34, 0.08);
+  --glass-bg:      rgba(255, 253, 208, 0.50); /* Opaque enough to show on cream */
   --glass-blur:    blur(20px);
 
   /* Typography */
@@ -76,6 +78,11 @@ body {
 p, .desc, .ap-summary, .hero-blur-statement, .focus-text, .edu-details, .timeline-entry .entry-content p {
   text-align: justify;
   text-justify: inter-word;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5); /* subtle highlight on cream */
+}
+
+h1, h2, h3, h4, h5, h6, .display-number {
+  text-shadow: 0 2px 4px rgba(43, 40, 34, 0.15); /* pinch of shadow for headings */
 }
 
 a { color: inherit; text-decoration: none; }
@@ -148,28 +155,28 @@ canvas { max-width: 100% !important; display: block; }
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.30);
+  background: rgba(255, 253, 208, 0.30);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(255, 253, 208, 0.50);
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(11, 33, 23, 0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+  box-shadow: 0 8px 32px rgba(43, 40, 34, 0.10), inset 0 1px 0 rgba(255, 253, 208,0.6);
 }
 
 .glass-button {
-  background: rgba(255, 255, 255, 0.30);
+  background: rgba(255, 253, 208, 0.30);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(255, 253, 208, 0.50);
   border-radius: 30px;
   color: var(--ink);
   transition: all 0.3s ease;
 }
 
 .glass-button:hover {
-  background: rgba(255, 255, 255, 0.50);
-  box-shadow: 0 4px 20px rgba(11, 33, 23, 0.15);
-  border-color: rgba(255, 255, 255, 0.80);
+  background: rgba(255, 253, 208, 0.50);
+  box-shadow: 0 4px 20px rgba(43, 40, 34, 0.15);
+  border-color: rgba(255, 253, 208, 0.80);
 }
 
 .display-number {

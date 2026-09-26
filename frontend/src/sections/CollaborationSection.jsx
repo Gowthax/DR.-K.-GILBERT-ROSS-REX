@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { profileData } from '../data/profile';
 import { Briefcase, GraduationCap, FlaskConical } from 'lucide-react';
-import ContactGraphics from '../components/ContactGraphics';
+
 import './CollaborationSection.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -161,7 +161,7 @@ const CollaborationSection = () => {
         </div>
 
         {/* 3D Graphics overlay */}
-        <ContactGraphics />
+
 
         {/* CTA */}
         <div className="collab-cta-wrap">

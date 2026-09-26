@@ -21,11 +21,11 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
   // Organelles (mitochondria / protein capsules) inside cytoplasm
   const organelles = useMemo(() => {
     return [
-      { pos: [0.45, 0.35, 0.2], rot: [0.4, 0.8, 0.2], scale: [0.28, 0.12, 0.12], color: '#588157' },
-      { pos: [-0.4, 0.4, -0.3], rot: [-0.5, 0.3, 0.7], scale: [0.25, 0.1, 0.1], color: '#3a5a40' },
-      { pos: [0.3, -0.45, 0.3], rot: [0.2, -0.6, 0.4], scale: [0.3, 0.12, 0.12], color: '#a3b18a' },
-      { pos: [-0.35, -0.3, -0.2], rot: [0.7, 0.2, -0.5], scale: [0.22, 0.09, 0.09], color: '#588157' },
-      { pos: [0.55, -0.15, -0.25], rot: [-0.3, 0.5, 0.9], scale: [0.24, 0.11, 0.11], color: '#3a5a40' }
+      { pos: [0.45, 0.35, 0.2], rot: [0.4, 0.8, 0.2], scale: [0.28, 0.12, 0.12], color: '#F2D09D' },
+      { pos: [-0.4, 0.4, -0.3], rot: [-0.5, 0.3, 0.7], scale: [0.25, 0.1, 0.1], color: '#9D9679' },
+      { pos: [0.3, -0.45, 0.3], rot: [0.2, -0.6, 0.4], scale: [0.3, 0.12, 0.12], color: '#F3E5AB' },
+      { pos: [-0.35, -0.3, -0.2], rot: [0.7, 0.2, -0.5], scale: [0.22, 0.09, 0.09], color: '#F2D09D' },
+      { pos: [0.55, -0.15, -0.25], rot: [-0.3, 0.5, 0.9], scale: [0.24, 0.11, 0.11], color: '#9D9679' }
     ];
   }, []);
 
@@ -101,7 +101,7 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
       <mesh ref={outerCellRef} scale={scale}>
         <sphereGeometry args={[1, 64, 64]} />
         <meshPhysicalMaterial
-          color="#588157"
+          color="#F2D09D"
           roughness={0.08}
           metalness={0.05}
           transmission={0.94}
@@ -109,7 +109,7 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
           ior={1.38}
           transparent={true}
           opacity={0.85}
-          attenuationColor="#a3b18a"
+          attenuationColor="#F3E5AB"
           attenuationDistance={1.4}
           clearcoat={0.8}
           clearcoatRoughness={0.12}
@@ -120,12 +120,12 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
       <mesh ref={innerMembraneRef} scale={scale * 0.95}>
         <sphereGeometry args={[1, 36, 36]} />
         <meshStandardMaterial
-          color="#a3b18a"
+          color="#F3E5AB"
           wireframe={true}
           transparent={true}
           opacity={0.32}
           roughness={0.3}
-          emissive="#3a5a40"
+          emissive="#9D9679"
           emissiveIntensity={0.25}
         />
       </mesh>
@@ -136,7 +136,7 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
         <mesh ref={nucleusRef} scale={0.42}>
           <sphereGeometry args={[1, 32, 32]} />
           <meshPhysicalMaterial
-            color="#a3b18a"
+            color="#F3E5AB"
             roughness={0.15}
             transmission={0.82}
             thickness={1.0}
@@ -150,8 +150,8 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
         <mesh scale={0.24}>
           <sphereGeometry args={[1, 24, 24]} />
           <meshStandardMaterial
-            color="#dad7cd"
-            emissive="#a3b18a"
+            color="#FFFDD0"
+            emissive="#F3E5AB"
             emissiveIntensity={0.9}
             roughness={0.2}
           />
@@ -161,8 +161,8 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
         <mesh rotation={[Math.PI / 3, 0, 0]} scale={0.52}>
           <torusGeometry args={[1, 0.045, 16, 64]} />
           <meshStandardMaterial
-            color="#dad7cd"
-            emissive="#588157"
+            color="#FFFDD0"
+            emissive="#F2D09D"
             emissiveIntensity={0.4}
             transparent={true}
             opacity={0.65}
@@ -206,7 +206,7 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
         </bufferGeometry>
         <pointsMaterial
           size={0.045}
-          color="#dad7cd"
+          color="#FFFDD0"
           transparent={true}
           opacity={0.8}
           sizeAttenuation={true}
@@ -218,7 +218,7 @@ const TranslucentCell = ({ position = [-1.9, -2.1, 0], scale = 1.9 }) => {
         position={[0, 0, 0]}
         intensity={2.4}
         distance={6}
-        color="#a3b18a"
+        color="#F3E5AB"
       />
     </group>
   );

@@ -16,16 +16,16 @@ const SceneContent = () => {
       {/* Transparent background so CSS background shows through */}
 
       {/* Lighting Architecture */}
-      <ambientLight intensity={0.8} color="#ffffff" />
+      <ambientLight intensity={0.8} color="var(--dark-ink)" />
       
       {/* Warm Academic Key Light */}
-      <directionalLight position={[6, 8, 4]} intensity={1.5} color="#ffffff" />
+      <directionalLight position={[6, 8, 4]} intensity={1.5} color="var(--dark-ink)" />
       
       {/* Cool Emerald Scientific Rim Light */}
       <spotLight
         position={[-6, 4, 3]}
         intensity={2.0}
-        color="#a3b18a"
+        color="#F3E5AB"
         angle={0.7}
         penumbra={0.8}
       />
@@ -33,7 +33,7 @@ const SceneContent = () => {
       {/* 1. Signature Dominant 3D Biological Cell (Hero page only) */}
       {isHome && (
         <>
-          <pointLight position={[-1.85, -2.2, 1.2]} intensity={2.2} color="#a3b18a" />
+          <pointLight position={[-1.85, -2.2, 1.2]} intensity={2.2} color="#F3E5AB" />
           <TranslucentCell position={[-1.85, -2.4, 0.4]} scale={2.1} />
         </>
       )}

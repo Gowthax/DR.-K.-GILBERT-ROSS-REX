@@ -93,7 +93,7 @@ const ResearchSection = () => {
             RESEARCH<br />DOMAINS
           </h2>
           <BlurText
-            text="Translational Biotechnology across molecular, genetic, agricultural and environmental systems."
+            text="Translational Biotechnology across molecular, plant , agricultural and environmental systems."
             delay={55}
             animateBy="words"
             direction="bottom"
@@ -128,19 +128,7 @@ const ResearchSection = () => {
 
           {/* Right: Research Canvas */}
           <div className="rs-canvas" aria-live="polite" aria-atomic="true">
-            {/* Image */}
-            <div className="rs-image-stage" ref={imageRef}>
-              <img
-                src={activeDomain.image}
-                alt={`${activeDomain.title} research domain`}
-                className="rs-domain-image"
-                loading="lazy"
-              />
-              <div className="rs-image-overlay" aria-hidden="true" />
-              <div className="rs-image-label" aria-hidden="true">
-                <span className="active-pill">● ACTIVE DISCIPLINE</span>
-              </div>
-            </div>
+
 
             {/* Detail */}
             <div className="rs-domain-detail" ref={detailRef}>

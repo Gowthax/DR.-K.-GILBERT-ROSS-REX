@@ -16,7 +16,7 @@ const AbstractShape = () => {
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
       <Sphere ref={meshRef} args={[1, 64, 64]} scale={1.5}>
         <MeshDistortMaterial
-          color="#059669"
+          color="#F2D09D"
           attach="material"
           distort={0.4}
           speed={2}
@@ -27,7 +27,7 @@ const AbstractShape = () => {
       
       <Sphere args={[0.8, 32, 32]} position={[2, -1, -2]}>
         <MeshDistortMaterial
-          color="#0284c7"
+          color="#9D9679"
           attach="material"
           distort={0.3}
           speed={1.5}

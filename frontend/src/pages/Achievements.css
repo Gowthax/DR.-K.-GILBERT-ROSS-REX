@@ -69,7 +69,7 @@
 .filter-pill-btn.is-active {
   background: var(--color-accent-dark);
   border-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--dark-ink);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -85,7 +85,7 @@
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid rgba(163, 177, 138, 0.2);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 253, 208, 0.3);
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -144,7 +144,7 @@
   background: rgba(28, 45, 36, 0.9);
   border: 1px solid var(--color-accent);
   border-radius: 4px;
-  color: #ffffff;
+  color: var(--dark-ink);
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   backdrop-filter: blur(8px);
@@ -250,7 +250,7 @@
   border-radius: 50%;
   background: rgba(28, 45, 36, 0.9);
   border: 1px solid rgba(163, 177, 138, 0.4);
-  color: #ffffff;
+  color: var(--dark-ink);
   font-size: 1.1rem;
   cursor: pointer;
   display: flex;
@@ -301,12 +301,12 @@
 .lightbox-title {
   font-family: var(--font-serif);
   font-size: 1.6rem;
-  color: #ffffff;
+  color: var(--dark-ink);
 }
 
 .lightbox-inst {
   font-size: 0.95rem;
-  color: #dad7cd;
+  color: #FFFDD0;
 }
 
 .lightbox-desc {

@@ -2,7 +2,7 @@
   background: transparent;
   color: inherit;
   padding: 48px 5%;
-  border-top: 1px solid rgba(238, 244, 239, 0.1);
+  border-top: 1px solid rgba(255, 253, 208, 0.1);
 }
 
 .footer-inner {
@@ -50,13 +50,13 @@
 
 .footer-role {
   font-size: 0.68rem;
-  color: rgba(238, 244, 239, 0.5);
+  color: rgba(255, 253, 208, 0.5);
   letter-spacing: 0.04em;
 }
 
 .footer-institution {
   font-size: 0.65rem;
-  color: rgba(238, 244, 239, 0.35);
+  color: rgba(255, 253, 208, 0.35);
   letter-spacing: 0.04em;
 }
 
@@ -69,7 +69,7 @@
 .footer-rule {
   width: 1px;
   height: 48px;
-  background: rgba(238, 244, 239, 0.15);
+  background: rgba(255, 253, 208, 0.15);
 }
 
 .footer-right {
@@ -81,7 +81,7 @@
 
 .footer-copy {
   font-size: 0.68rem;
-  color: rgba(238, 244, 239, 0.4);
+  color: rgba(255, 253, 208, 0.4);
   letter-spacing: 0.04em;
 }
 
@@ -90,11 +90,11 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(238, 244, 239, 0.6);
+  color: rgba(255, 253, 208, 0.6);
   cursor: pointer;
   transition: color 0.3s;
   padding: 6px 0;
-  border-bottom: 1px solid rgba(238, 244, 239, 0.15);
+  border-bottom: 1px solid rgba(255, 253, 208, 0.15);
 }
 
 .back-to-top:hover { color: inherit; }

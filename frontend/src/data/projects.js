@@ -35,42 +35,30 @@ export const projectsData = [
 
 export const researchDomains = [
   {
-    id: "plant_tissue",
-    title: "Plant Tissue Culture",
-    subtitle: "In vitro Propagation & Micropropagation",
-    image: "/research/plant new.png",
-    description: "Advanced techniques for the sterile in vitro cultivation of plant cells, tissues, and organs under controlled environmental and nutritional conditions.",
-    keyAreas: ["Micropropagation", "Callus Culture", "Pathogen-Free Plants", "In Vitro Conservation"]
-  },
-  {
-    id: "pharma",
-    title: "Pharmaceutical Biotechnology",
-    subtitle: "Drug Discovery & Biotherapeutics",
-    image: "/research/Pharmaceutical Biotechnology.png",
-    description: "Development and optimization of biopharmaceuticals, targeted drug delivery systems, and therapeutic proteins leveraging molecular tools for clinical advancements.",
-    keyAreas: ["Biotherapeutics", "Drug Delivery Systems", "Therapeutic Proteins", "Pre-clinical Trials"]
+    id: "plant",
+    title: "Plant Biotechnology",
+    subtitle: "Genetic Modification & Trait Enhancement",
+    description: "Enhancing plant traits through molecular interventions, focusing on genetic modification, molecular markers, and improving plant physiology for better adaptation.",
+    keyAreas: ["Genetic Modification", "Molecular Markers", "Trait Enhancement", "Plant Physiology"]
   },
   {
     id: "agri",
-    title: "Plant and Agriculture Biotechnology",
+    title: "Agricultural Biotechnology",
     subtitle: "Crop Resilience & Sustainable Farming",
-    image: "/research/Plant and Agriculture Biotechnology.png",
-    description: "Enhancing crop productivity and stress tolerance through molecular breeding, transgenic approaches, and the development of sustainable agricultural bio-inputs.",
+    description: "Improving agricultural productivity and stress tolerance through molecular breeding, transgenic approaches, and the development of sustainable agricultural bio-inputs.",
     keyAreas: ["Molecular Breeding", "Crop Resilience", "Bio-inputs", "Transgenic Crops"]
   },
   {
-    id: "environmental",
-    title: "Environmental Biotechnology",
-    subtitle: "Bioplastics & Waste Valorization",
-    image: "/research/environmental.jpg",
-    description: "Valorizing organic fisheries waste and invasive <em>Prosopis juliflora</em> biomass into fully biodegradable food packaging films, biopolymers, and green materials.",
-    keyAreas: ["Biodegradable Polymers", "Biomass Upcycling", "Waste-to-Resource", "Eco-Friendly Packaging"]
+    id: "plant_tissue",
+    title: "Plant Tissue Culture",
+    subtitle: "In vitro Propagation & Micropropagation",
+    description: "Advanced techniques for the sterile in vitro cultivation of plant cells, tissues, and organs under controlled environmental and nutritional conditions.",
+    keyAreas: ["Micropropagation", "Callus Culture", "Pathogen-Free Plants", "In Vitro Conservation"]
   },
   {
     id: "microbiology",
     title: "Microbiology",
     subtitle: "Biocontrol Agents & Microbial Fermentation",
-    image: "/research/microbiology.jpg",
     description: "Screening, isolation, and physiological profiling of beneficial bacterial and fungal species, antagonistic biocontrol assays, and probiotic culture production.",
     keyAreas: ["Biocontrol Strains", "Microbial Screening", "Probiotic Assays", "Antimicrobial Profiling"]
   },
@@ -78,8 +66,21 @@ export const researchDomains = [
     id: "biofertilizer",
     title: "Biofertilizer Technology",
     subtitle: "Microbial Inoculants & Soil Health",
-    image: "/research/biofertilizer tech.png",
     description: "Formulation and scale-up of beneficial microbial inoculants, symbiotic nitrogen fixers, and phosphate solubilizers to restore soil fertility and reduce chemical dependencies.",
     keyAreas: ["Microbial Inoculants", "Soil Fertility", "Nitrogen Fixers", "Phosphate Solubilization"]
+  },
+  {
+    id: "environmental",
+    title: "Environmental Biotechnology",
+    subtitle: "Bioplastics & Waste Valorization",
+    description: "Valorizing organic fisheries waste and invasive <em>Prosopis juliflora</em> biomass into fully biodegradable food packaging films, biopolymers, and green materials.",
+    keyAreas: ["Biodegradable Polymers", "Biomass Upcycling", "Waste-to-Resource", "Eco-Friendly Packaging"]
+  },
+  {
+    id: "pharma",
+    title: "Pharmaceutical Biotechnology",
+    subtitle: "Drug Discovery & Biotherapeutics",
+    description: "Development and optimization of biopharmaceuticals, targeted drug delivery systems, and therapeutic proteins leveraging molecular tools for clinical advancements.",
+    keyAreas: ["Biotherapeutics", "Drug Delivery Systems", "Therapeutic Proteins", "Pre-clinical Trials"]
   }
 ];

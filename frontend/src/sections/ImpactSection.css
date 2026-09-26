@@ -1,7 +1,7 @@
 .impact-section {
   position: relative;
-  background: #0D1F10;
-  color: #E8F5E8;
+  background: var(--ink);
+  color: var(--bg);
   padding: 100px 0;
   overflow: hidden;
 }
@@ -11,13 +11,13 @@
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(135deg, rgba(238,244,239,0.02) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(255, 253, 208,0.02) 0%, transparent 60%),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 40px,
-      rgba(238,244,239,0.02) 40px,
-      rgba(238,244,239,0.02) 41px
+      rgba(255, 253, 208,0.02) 40px,
+      rgba(255, 253, 208,0.02) 41px
     );
 }
 

@@ -30,7 +30,7 @@
   opacity: 1;
   transform: scale(1) translateZ(0);
   border-color: var(--color-forest);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 253, 208, 0.4);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -116,7 +116,7 @@
 .patent-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-forest);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 253, 208, 0.4);
 }
 
 .patent-header {

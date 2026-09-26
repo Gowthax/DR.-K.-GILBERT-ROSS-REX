@@ -3,7 +3,7 @@ import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SiteNavbar from './components/SiteNavbar';
-import CustomCursor from './components/CustomCursor';
+
 import Preloader from './components/Preloader';
 import HeroSection from './sections/HeroSection';
 import AcademicProfileSection from './sections/AcademicProfileSection';
@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="app-container">
       <Preloader />
-      <CustomCursor />
+
       <SiteNavbar />
       <Routes>
         <Route path="/" element={<MainContent />} />

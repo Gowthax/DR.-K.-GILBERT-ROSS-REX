@@ -21,7 +21,7 @@ const MoleculeCluster = ({ position, scale = 0.4, rotationSpeed = 0.2 }) => {
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[0.35, 20, 20]} />
         <meshPhysicalMaterial
-          color="#3a5a40"
+          color="#9D9679"
           transmission={0.85}
           roughness={0.2}
           ior={1.45}
@@ -34,7 +34,7 @@ const MoleculeCluster = ({ position, scale = 0.4, rotationSpeed = 0.2 }) => {
       <mesh position={[0.5, 0.4, 0.2]}>
         <sphereGeometry args={[0.22, 16, 16]} />
         <meshPhysicalMaterial
-          color="#588157"
+          color="#F2D09D"
           transmission={0.8}
           roughness={0.2}
           ior={1.4}
@@ -44,14 +44,14 @@ const MoleculeCluster = ({ position, scale = 0.4, rotationSpeed = 0.2 }) => {
       </mesh>
       <mesh position={[0.25, 0.2, 0.1]} rotation={[0.4, 0.2, 0.8]}>
         <cylinderGeometry args={[0.04, 0.04, 0.6, 8]} />
-        <meshStandardMaterial color="#a3b18a" roughness={0.3} transparent opacity={0.6} />
+        <meshStandardMaterial color="#F3E5AB" roughness={0.3} transparent opacity={0.6} />
       </mesh>
 
       {/* Bond 2 + Atom */}
       <mesh position={[-0.55, 0.3, -0.3]}>
         <sphereGeometry args={[0.24, 16, 16]} />
         <meshPhysicalMaterial
-          color="#a3b18a"
+          color="#F3E5AB"
           transmission={0.7}
           roughness={0.2}
           ior={1.4}
@@ -61,14 +61,14 @@ const MoleculeCluster = ({ position, scale = 0.4, rotationSpeed = 0.2 }) => {
       </mesh>
       <mesh position={[-0.27, 0.15, -0.15]} rotation={[-0.3, 0.5, -0.7]}>
         <cylinderGeometry args={[0.04, 0.04, 0.7, 8]} />
-        <meshStandardMaterial color="#dad7cd" roughness={0.3} transparent opacity={0.5} />
+        <meshStandardMaterial color="#FFFDD0" roughness={0.3} transparent opacity={0.5} />
       </mesh>
 
       {/* Bond 3 + Atom */}
       <mesh position={[0.2, -0.6, -0.2]}>
         <sphereGeometry args={[0.2, 16, 16]} />
         <meshPhysicalMaterial
-          color="#344e41"
+          color="#8C856B"
           transmission={0.85}
           roughness={0.2}
           ior={1.4}
@@ -78,7 +78,7 @@ const MoleculeCluster = ({ position, scale = 0.4, rotationSpeed = 0.2 }) => {
       </mesh>
       <mesh position={[0.1, -0.3, -0.1]} rotation={[0.6, -0.3, 0.2]}>
         <cylinderGeometry args={[0.04, 0.04, 0.65, 8]} />
-        <meshStandardMaterial color="#a3b18a" roughness={0.3} transparent opacity={0.6} />
+        <meshStandardMaterial color="#F3E5AB" roughness={0.3} transparent opacity={0.6} />
       </mesh>
     </group>
   );
@@ -119,7 +119,7 @@ const CytoskeletalStrands = () => {
       {curves.map((geo, idx) => (
         <mesh key={idx} geometry={geo}>
           <meshPhysicalMaterial
-            color="#588157"
+            color="#F2D09D"
             transmission={0.8}
             roughness={0.3}
             transparent={true}
@@ -218,7 +218,7 @@ const MolecularEcosystem = () => {
         </bufferGeometry>
         <pointsMaterial
           size={0.05}
-          color="#a3b18a"
+          color="#F3E5AB"
           transparent={true}
           opacity={0.35}
           sizeAttenuation={true}
@@ -237,7 +237,7 @@ const MolecularEcosystem = () => {
         </bufferGeometry>
         <pointsMaterial
           size={0.08}
-          color="#dad7cd"
+          color="#FFFDD0"
           transparent={true}
           opacity={0.4}
           sizeAttenuation={true}
