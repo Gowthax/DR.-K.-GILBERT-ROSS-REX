@@ -12,6 +12,7 @@ const Achievements = () => {
         if (filter === 'awards') return item.id.includes('award') || item.id.includes('performer') || item.id.includes('trifest');
         if (filter === 'grants') return item.id.includes('msme') || item.id.includes('sanction');
         if (filter === 'field') return item.id.includes('field');
+        if (filter === 'training') return item.id.includes('iit') || item.id.includes('programme') || item.id.includes('stem');
         return true;
       });
 
@@ -55,6 +56,12 @@ const Achievements = () => {
           onClick={() => setFilter('field')}
         >
           Community Field Deployments
+        </button>
+        <button
+          className={`filter-pill-btn ${filter === 'training' ? 'is-active' : ''}`}
+          onClick={() => setFilter('training')}
+        >
+          National Faculty Training
         </button>
       </div>
 

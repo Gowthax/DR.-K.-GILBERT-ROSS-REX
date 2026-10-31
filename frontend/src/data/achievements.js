@@ -1,6 +1,28 @@
 export const achievementsData = {
   galleryItems: [
     {
+      id: "award-scinicorn-outstanding-faculty-2026",
+      title: "Outstanding Faculty Award — Scinicorn Labs 2026",
+      category: "Academic & Research Excellence Award",
+      year: "2026",
+      institution: "Scinicorn Labs — International Conference on Sustainable Technologies",
+      logo: "/logos/scinicorn_logo.png",
+      image: "/award_scinicorn_outstanding_faculty_2026.jpg",
+      extraImage: "/cert_outstanding_faculty_2026.jpg",
+      description: "Conferred the prestigious Outstanding Faculty Award (Cert. No. SL/2026/OF/015) on stage by Scinicorn Labs at the International Conference on Sustainable Technologies in Health Care and Environment at Marthandam on 10/10/2026. Conferred in recognition of distinguished excellence in teaching, student research mentorship, scholarly publications, patents, funded projects, biotechnology innovation, and institutional quality enhancement at Sethu Institute of Technology."
+    },
+    {
+      id: "programme-iit-madras-stem-2026",
+      title: "IIT Madras STEM Biotechnology Capacity Building Programme",
+      category: "National Faculty Development",
+      year: "2026",
+      institution: "Teaching Learning Centre (TLC), IIT Madras & Ministry of Education",
+      logo: "/logos/mmttc_logo.png",
+      image: "/presentation_iit_madras_stem_2026.jpg",
+      extraImage: "/cert_iit_madras_stem_2026.jpg",
+      description: "Successfully completed the intensive 9-day National Capacity Building Programme on STEM Education (Biotechnology) organized by Teaching Learning Centre (TLC), IIT Madras during 19–27 October, 2026, under the aegis of the Ministry of Education, Govt. of India through the Malaviya Mission Teacher Training Programme (MM-TTC)."
+    },
+    {
       id: "best-performer-2025",
       title: "Best Performer Award — Teachers' Day 2025",
       category: "Institutional Excellence Award",

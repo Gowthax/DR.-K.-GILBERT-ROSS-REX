@@ -71,7 +71,7 @@ const PublicationsSection = () => {
           <div className="pub-title-row">
             <h2 className="pub-heading">PUBLICATIONS</h2>
             <div className="pub-count-display">
-              <span className="pub-count-num">27</span>
+              <span className="pub-count-num">{publicationsData.length}</span>
               <span className="pub-count-label">RESEARCH<br />OUTPUTS</span>
             </div>
           </div>

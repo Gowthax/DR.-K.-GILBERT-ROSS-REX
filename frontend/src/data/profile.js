@@ -20,7 +20,7 @@ export const profileData = {
     "Plant & Environmental Biotechnology"
   ],
   stats: [
-    { label: "Research Publications", value: "27" },
+    { label: "Research Publications", value: "28" },
     { label: "Granted Patents", value: "2" },
     { label: "UG + PG Researchers Guided", value: "42" },
     { label: "Years Academic Experience", value: "8+" }

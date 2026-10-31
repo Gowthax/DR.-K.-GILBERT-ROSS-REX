@@ -27,6 +27,14 @@ export const publicationsData = [
 
   // ---------------- JOURNALS ----------------
   {
+    title: "Bio-assisted integration of a Co–N/S coordination network with functionalized graphene oxide for supercapacitor and fluorescence sensing applications",
+    authors: "M. Kalaiyarasi, Pugalenthi Ramesh, Sarah A. Alshehri, K. Gilbert Ross Rex, K. Gopi, V. Manikandan, Ganesh Koyyad, Tamanna Pradhan",
+    year: "2026",
+    journal: "Diamond & Related Materials (Elsevier, IF: 5.2)",
+    link: "https://doi.org/10.1016/j.diamond.2026.114277",
+    type: "Journal"
+  },
+  {
     title: "Transition- Metal-Free Piranha-Assisted One-Pot Oxidative Iodination of Graphene Oxide for Selective Turn-On Fluorescence Sensing of Cu2+ Ions",
     authors: "A. Elavarasan, M. Kalaiyarasi, K. Tamilarasu, K. Gilbert Ross Rex, M. Santhamoorthy, Abdullah A. Al-Kahtani, Tamanna Pradhan, Pugalenthi Ramesh",
     year: "2026",

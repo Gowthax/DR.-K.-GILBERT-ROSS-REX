@@ -372,6 +372,12 @@
   border: 1px solid rgba(163, 177, 138, 0.4);
   color: var(--color-sage);
 }
+.cert-badge-type.iit {
+  background: rgba(43, 90, 160, 0.2);
+  border: 1px solid rgba(43, 90, 160, 0.4);
+  color: #5c93d8;
+}
+
 
 .cert-focus-tag {
   font-size: 0.72rem;

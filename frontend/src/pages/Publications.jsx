@@ -34,7 +34,7 @@ const Publications = () => {
     <div className="section-container publications-section" ref={containerRef}>
       <div className="header-section animate-section">
         <h1 className="page-title text-gradient">Publications Archive</h1>
-        <p className="profile-summary">A comprehensive record of 27 journal publications, book chapters, and intellectual property.</p>
+        <p className="profile-summary">A comprehensive record of 28 journal publications, book chapters, and intellectual property.</p>
       </div>
 
       <div className="animate-section">

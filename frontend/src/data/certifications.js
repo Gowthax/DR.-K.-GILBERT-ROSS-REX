@@ -11,5 +11,8 @@ export const certifications = [
   { id: 10, title: 'UBA Fund Sanction Letter', pdf: '/documents/UBA fund sanction letter.pdf', imgPreview: null },
   { id: 11, title: 'K. Gilbert, Biotechnology, ASP', pdf: '/documents/K. Gilbert, Biotechnology, ASP.pdf', imgPreview: null },
   { id: 12, title: '100% Result', pdf: '/documents/100_ Result.pdf', imgPreview: null },
-  { id: 13, title: 'Mushroom Cultivation Training', pdf: '/documents/mushroom_cultivation_cert.jpg', imgPreview: null }
+  { id: 13, title: 'Mushroom Cultivation Training', pdf: '/documents/mushroom_cultivation_cert.jpg', imgPreview: null },
+  { id: 14, title: 'Outstanding Faculty Award — Scinicorn Labs (2026)', pdf: '/documents/cert_outstanding_faculty_2026.jpg', imgPreview: null },
+  { id: 15, title: 'IIT Madras — Capacity Building Programme on STEM Education (Biotechnology)', pdf: '/documents/iit_madras_stem_biotechnology_cert.jpg', imgPreview: null },
+  { id: 16, title: 'Elsevier Research Publication — Bio-assisted Co–N/S Graphene Oxide (2026)', pdf: '/documents/Bio-assisted Co-NS Graphene Oxide Supercapacitor.pdf', imgPreview: null }
 ];

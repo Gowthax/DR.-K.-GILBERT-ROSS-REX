@@ -88,7 +88,7 @@ const AchievementsSection = () => {
         {/* Asymmetric Gallery */}
         <div className="ach-gallery" role="list">
           {galleryItems.map((item, i) => {
-            const sizes = ['large', 'small', 'small', 'medium', 'medium'];
+            const sizes = ['large', 'small', 'medium', 'small', 'medium', 'large', 'medium'];
             const size = sizes[i % sizes.length];
             return (
               <article
